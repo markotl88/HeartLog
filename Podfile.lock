@@ -1,0 +1,22 @@
+PODS:
+  - Alamofire (4.7.2)
+  - EVReflection (5.6.2):
+    - EVReflection/Core (= 5.6.2)
+  - EVReflection/Core (5.6.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - EVReflection
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - EVReflection
+
+SPEC CHECKSUMS:
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  EVReflection: 640322f8a3aaf78cbc3c23892476b6adb636ebf0
+
+PODFILE CHECKSUM: 0067ce234b31b69a26b46414c9e26c7c2ab9f35f
+
+COCOAPODS: 1.5.3
