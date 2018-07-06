@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Heartlog</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Please enable Bluetooth on your phone in order to connect with iHealth devices</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Please allow camera usage in order to scan QR code</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Please allow us usage of FaceID in order to login into HeartLog.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Please enable your mic</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>GothamHTF-Black.otf</string>
+		<string>GothamHTF-BlackItalic.otf</string>
+		<string>GothamHTF-Bold.otf</string>
+		<string>GothamHTF-BoldCondensed.otf</string>
+		<string>GothamHTF-BoldItalic.otf</string>
+		<string>GothamHTF-Book.otf</string>
+		<string>GothamHTF-BookCondensed.otf</string>
+		<string>GothamHTF-BookItalic.otf</string>
+		<string>GothamHTF-Light.otf</string>
+		<string>GothamHTF-LightCondensed.otf</string>
+		<string>GothamHTF-LightItalic.otf</string>
+		<string>GothamHTF-Medium.otf</string>
+		<string>GothamHTF-MediumCondensed.otf</string>
+		<string>GothamHTF-MediumItalic.otf</string>
+		<string>GothamHTF-Thin.otf</string>
+		<string>GothamHTF-ThinItalic.otf</string>
+		<string>GothamHTF-Ultra.otf</string>
+		<string>GothamHTF-UltraItalic.otf</string>
+		<string>GothamHTF-XLight.otf</string>
+		<string>GothamHTF-XLightItalic.otf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>external-accessory</string>
+		<string>bluetooth-central</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	<key>UISupportedExternalAccessoryProtocols</key>
+	<array>
+		<string>com.jiuan.BPV20</string>
+		<string>com.jiuan.P930</string>
+		<string>com.jiuan.BPV21</string>
+		<string>com.jiuan.BPV24</string>
+		<string>com.jiuan.BPAV10</string>
+		<string>com.jiuan.BPV22</string>
+		<string>com.jiuan.BGV30</string>
+		<string>com.jiuan.BGV31</string>
+		<string>com.ihealth.sc221</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+</dict>
+</plist>

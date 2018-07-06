@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1636F564FB937FC8499F800861A26C12BA229212",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "DD0D09276ACB5AE164907195AD3F8703F2B57DF7" : 9223372036854775807,
+    "1636F564FB937FC8499F800861A26C12BA229212" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "17A3EAD4-D41D-4C26-9F20-3622F9C5B06C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "DD0D09276ACB5AE164907195AD3F8703F2B57DF7" : "..\/..",
+    "1636F564FB937FC8499F800861A26C12BA229212" : "dms-ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Dms",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Dms.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:WeAreNolte\/dms-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1636F564FB937FC8499F800861A26C12BA229212"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:moxienyc\/moxie-box.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DD0D09276ACB5AE164907195AD3F8703F2B57DF7"
+    }
+  ]
+}

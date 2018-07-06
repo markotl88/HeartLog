@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="MOBloodPressureReading" representedClassName="MOBloodPressureReading" parentEntity="MOReading" syncable="YES">
+        <attribute name="activity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="diastolic" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="heartRate" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="metaIncomplete" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mood" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="systolic" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="validated" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="MOFitnessReading" representedClassName="MOFitnessReading" parentEntity="MOReading" syncable="YES">
+        <attribute name="activityCategory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="calories" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="distance" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="duration" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="intensity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="metaIncomplete" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mood" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="validated" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="MOGlucoseReading" representedClassName="MOGlucoseReading" parentEntity="MOReading" syncable="YES">
+        <attribute name="activity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bloodGlucose" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="food" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="insulin" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="metaIncomplete" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mood" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="oralMeds" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="validated" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="MOReading" representedClassName="MOReading" syncable="YES">
+        <attribute name="dateCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dateUpdated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastUpdated" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shortDateCreated" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shortDateUpdated" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shortTimeCreated" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shortTimeUpdated" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="source" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncedWithServer" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="utcOffset" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MORoutineReading" representedClassName="MORoutineReading" parentEntity="MOReading" syncable="YES">
+        <attribute name="caloriesBurned" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="distance" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="elevation" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="floors" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mood" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="steps" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="validated" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="water" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="MOSleepReading" representedClassName="MOSleepReading" parentEntity="MOReading" syncable="YES">
+        <attribute name="awake" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="deep" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="light" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="metaIncomplete" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mood" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rem" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="timesWoken" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="totalSleep" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="validated" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="MOWeightReading" representedClassName="MOWeightReading" parentEntity="MOReading" syncable="YES">
+        <attribute name="bmi" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fatPercent" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="freeMass" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="height" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="imperialWeight" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="massWeight" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mood" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="validated" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="weight" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="MOBloodPressureReading" positionX="-18" positionY="90" width="128" height="150"/>
+        <element name="MOFitnessReading" positionX="-27" positionY="135" width="128" height="180"/>
+        <element name="MOGlucoseReading" positionX="-36" positionY="90" width="128" height="165"/>
+        <element name="MOReading" positionX="-36" positionY="27" width="128" height="255"/>
+        <element name="MORoutineReading" positionX="-27" positionY="144" width="128" height="165"/>
+        <element name="MOSleepReading" positionX="-27" positionY="117" width="128" height="180"/>
+        <element name="MOWeightReading" positionX="-27" positionY="126" width="128" height="180"/>
+    </elements>
+</model>

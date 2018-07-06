@@ -1,0 +1,9 @@
+image: ivanvojinovic/xcode-bot-resource
+
+pipelines:
+  default:
+    - step:
+        script:
+          - apt-get install ruby-full
+          - gem install scan
+          - scan

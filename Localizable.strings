@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Dms
+
+  Created by Marko Stajic on 11/30/16.
+  Copyright © 2018 FTN. All rights reserved.
+*/
+
+general.appname = "Noteworth";
+general.feedbackEmail = "help@noteworth.com";
+
+broadReadings.bloodGlucose = "Blood Glucose";
+broadReadings.bloodPressure  = "Cardiovascular";
+broadReadings.activity  = "Activity";
+broadReadings.nutrition  = "Nutrition";
+broadReadings.sleep  = "Sleep";
+
+

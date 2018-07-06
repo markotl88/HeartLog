@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteCell" rowHeight="190" id="KGk-i7-Jjw" customClass="NoteCell" customModule="Dms" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mvW-5V-8Hd" userLabel="containerView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="156"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7n-Zy-Lhc" customClass="ActivityLabel" customModule="Dms" customModuleProvider="target">
+                                <rect key="frame" x="25" y="21" width="325" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="H98-ga-LxC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1kc-vC-L6g" customClass="NoteTextView" customModule="Dms" customModuleProvider="target">
+                                <rect key="frame" x="25" y="49" width="325" height="82"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Put any notes to self here."/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1kc-vC-L6g" secondAttribute="trailing" constant="25" id="OJg-rH-qBp"/>
+                            <constraint firstItem="1kc-vC-L6g" firstAttribute="top" secondItem="m7n-Zy-Lhc" secondAttribute="bottom" constant="8" id="Q2c-aG-ldU"/>
+                            <constraint firstItem="m7n-Zy-Lhc" firstAttribute="leading" secondItem="mvW-5V-8Hd" secondAttribute="leading" constant="25" id="RMy-n7-t9w"/>
+                            <constraint firstItem="m7n-Zy-Lhc" firstAttribute="top" secondItem="mvW-5V-8Hd" secondAttribute="top" constant="21" id="nGe-Th-foc"/>
+                            <constraint firstAttribute="trailing" secondItem="m7n-Zy-Lhc" secondAttribute="trailing" constant="25" id="t1N-6V-s3A"/>
+                            <constraint firstAttribute="bottom" secondItem="1kc-vC-L6g" secondAttribute="bottom" constant="25" id="xzc-li-l76"/>
+                            <constraint firstItem="1kc-vC-L6g" firstAttribute="leading" secondItem="mvW-5V-8Hd" secondAttribute="leading" constant="25" id="z5q-BZ-1px"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mvW-5V-8Hd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dfF-9b-sl2"/>
+                    <constraint firstItem="mvW-5V-8Hd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="leE-Wn-TMZ"/>
+                    <constraint firstAttribute="bottom" secondItem="mvW-5V-8Hd" secondAttribute="bottom" constant="14" id="lwS-y9-oxv"/>
+                    <constraint firstAttribute="trailing" secondItem="mvW-5V-8Hd" secondAttribute="trailing" id="q1l-N0-wTi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="containerView" destination="mvW-5V-8Hd" id="2b7-8I-wtb"/>
+                <outlet property="noteLabel" destination="m7n-Zy-Lhc" id="3aF-op-beQ"/>
+                <outlet property="noteTextView" destination="1kc-vC-L6g" id="hWT-Wj-5uW"/>
+            </connections>
+            <point key="canvasLocation" x="38.5" y="59.5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,111 @@
+
+/* Class = "UILabel"; text = "Hi!"; ObjectID = "4wJ-5d-85J"; */
+"4wJ-5d-85J.text" = "Hi!\nWelcome to Noteworth.";
+
+/* Class = "UILabel"; text = "Check this box that you understand that the accounts will be made on your behalf."; ObjectID = "5FB-fN-vUH"; */
+"5FB-fN-vUH.text" = "I agree to the Noteworth Terms of Service.";
+
+/* Class = "UILabel"; text = "Please enter your verification code"; ObjectID = "6MF-gc-9lc"; */
+"6MF-gc-9lc.text" = "Please enter your\nverification code:";
+
+/* Class = "UILabel"; text = "Female"; ObjectID = "7Hh-Jo-jjZ"; */
+"7Hh-Jo-jjZ.text" = "Female";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "7np-tY-a6X"; */
+"7np-tY-a6X.normalTitle" = "NEXT";
+
+/* Class = "UIButton"; normalTitle = "RESEND CODE"; ObjectID = "7sC-lM-fiO"; */
+"7sC-lM-fiO.normalTitle" = "RESEND CODE";
+
+/* Class = "UIButton"; normalTitle = "AppName"; ObjectID = "7vc-2T-9vb"; */
+"7vc-2T-9vb.normalTitle" = "NEXT";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "9Ue-mt-GY4"; */
+"9Ue-mt-GY4.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "Aq7-0u-aha"; */
+"Aq7-0u-aha.normalTitle" = "NEXT";
+
+/* Class = "UILabel"; text = "Please enter your registration code below"; ObjectID = "Awx-Sq-Iu5"; */
+"Awx-Sq-Iu5.text" = "Please enter your\nregistration code below:";
+
+/* Class = "UILabel"; text = "Weight"; ObjectID = "BoA-24-DyV"; */
+"BoA-24-DyV.text" = "Weight";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "C2V-Wr-Bae"; */
+"C2V-Wr-Bae.normalTitle" = "NEXT";
+
+/* Class = "UIButton"; normalTitle = "JOIN NOW"; ObjectID = "EiX-WB-Zce"; */
+"EiX-WB-Zce.normalTitle" = "JOIN NOW";
+
+/* Class = "UILabel"; text = "Before we start, please have your registration code."; ObjectID = "FgZ-e4-PCm"; */
+"FgZ-e4-PCm.text" = "Take charge of your health.";
+
+/* Class = "UILabel"; text = "Welcome to Constance."; ObjectID = "H3B-yS-Fw2"; */
+"H3B-yS-Fw2.text" = "Welcome to networth.";
+
+/* Class = "UILabel"; text = "Gender"; ObjectID = "OQk-Zc-Fo7"; */
+"OQk-Zc-Fo7.text" = "Sex";
+
+/* Class = "UIButton"; normalTitle = "FINISH"; ObjectID = "P86-RU-gW6"; */
+"P86-RU-gW6.normalTitle" = "FINISH";
+
+/* Class = "UILabel"; text = "Account Creation"; ObjectID = "SgY-GF-5vL"; */
+"SgY-GF-5vL.text" = "Account Creation";
+
+/* Class = "UIButton"; normalTitle = "SIGN IN"; ObjectID = "VcH-OO-E9g"; */
+"VcH-OO-E9g.normalTitle" = "SIGN IN";
+
+/* Class = "UILabel"; text = "Account Creation"; ObjectID = "W97-Pf-zok"; */
+"W97-Pf-zok.text" = "Account Creation";
+
+/* Class = "UILabel"; text = "In order to be able to link the data from your wearables we will create free accounts with the following services, connect the data back to your healthcare provider, and accept their privacy policies on your behalf."; ObjectID = "bQq-j9-K2y"; */
+"bQq-j9-K2y.text" = "To connect to the devices in your Noteworth Box and make sure that the data is sent securely to your doctor, we will automatically create free accounts with the following services on your behalf.";
+
+/* Class = "UILabel"; text = "Almost done! Please complete your personal information to use DMS."; ObjectID = "bSN-Dr-02J"; */
+"bSN-Dr-02J.text" = "Almost done! Please complete your\npersonal information:";
+
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "gt9-l0-SFy"; */
+"gt9-l0-SFy.normalTitle" = "SUBMIT";
+
+/* Class = "UIButton"; normalTitle = "CREATE AN ACCOUNT"; ObjectID = "hgv-46-R2B"; */
+"hgv-46-R2B.normalTitle" = "SIGN IN";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "hlm-99-pqy"; */
+"hlm-99-pqy.normalTitle" = "NEXT";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "iTm-iS-sYy"; */
+"iTm-iS-sYy.normalTitle" = "NEXT";
+
+/* Class = "UILabel"; text = "Personal Information"; ObjectID = "kLJ-EZ-1A6"; */
+"kLJ-EZ-1A6.text" = "Account Creation";
+
+/* Class = "UIButton"; normalTitle = "PRIVACY POLICY"; ObjectID = "kWD-TL-hK9"; */
+"kWD-TL-hK9.normalTitle" = "PRIVACY POLICY";
+
+/* Class = "UILabel"; text = "Height"; ObjectID = "nNv-Aq-y7e"; */
+"nNv-Aq-y7e.text" = "Height";
+
+/* Class = "UIButton"; normalTitle = "I AM A RETURNING USER"; ObjectID = "pkD-AI-GGf"; */
+"pkD-AI-GGf.normalTitle" = "CREATE ACCOUNT";
+
+/* Class = "UILabel"; text = "Constance"; ObjectID = "rmJ-YX-P45"; */
+"rmJ-YX-P45.text" = "Noteworth";
+
+/* Class = "UIButton"; normalTitle = "FORGOT PASSWORD"; ObjectID = "sKQ-eH-iS0"; */
+"sKQ-eH-iS0.normalTitle" = "FORGOT PASSWORD";
+
+/* Class = "UILabel"; text = "Birthday"; ObjectID = "su5-4a-JVO"; */
+"su5-4a-JVO.text" = "Birthday";
+
+/* Class = "UILabel"; text = "Please enter your phone, we will be sending you a verification code."; ObjectID = "tPX-uF-Nhk"; */
+"tPX-uF-Nhk.text" = "Please enter your mobile\nphone number, so we can text\nyou a verification code.";
+
+/* Class = "UILabel"; text = "Male"; ObjectID = "u83-kM-08M"; */
+"u83-kM-08M.text" = "Male";
+
+/* Class = "UIButton"; normalTitle = "TERMS OF USE"; ObjectID = "vE0-mm-lj0"; */
+"vE0-mm-lj0.normalTitle" = "TERMS OF USE";
+
+/* Class = "UILabel"; text = "You can reset the password associated with your DMS account here. To get started, please enter your email address and we'll send you a link to reset your password in a few minutes."; ObjectID = "z9a-uz-Ycs"; */
+"z9a-uz-Ycs.text" = "Forgot your password? Don't worry. Just enter your email address, and we'll send you a link to reset it.";

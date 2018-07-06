@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gyE-dz-nlo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dms" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="195-ou-vCJ">
+                                <rect key="frame" x="129" y="151" width="116" height="116"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="195-ou-vCJ" secondAttribute="height" multiplier="1:1" id="Afd-aP-GkV"/>
+                                    <constraint firstAttribute="width" constant="116" id="BuN-xz-C7H"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Constance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybX-AM-1eR">
+                                <rect key="frame" x="22" y="299" width="330" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Zkb-Cp-D4M"/>
+                                    <constraint firstAttribute="width" constant="330" id="gSR-aV-m1D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmv-bh-fcO" customClass="CustomButton" customModule="Dms" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="cF6-cK-btC"/>
+                                </constraints>
+                                <state key="normal" title="I AM A RETURNING USER"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmB-Jp-dMP" customClass="CustomButton" customModule="Dms" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="527" width="375" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="5cx-BI-NRf"/>
+                                </constraints>
+                                <state key="normal" title="CREATE AN ACCOUNT"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GmB-Jp-dMP" secondAttribute="trailing" id="4dA-Di-Dol"/>
+                            <constraint firstItem="GmB-Jp-dMP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6JB-84-XqY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bmv-bh-fcO" secondAttribute="bottom" id="ELc-iE-kFN"/>
+                            <constraint firstItem="195-ou-vCJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kz0-xW-Dww"/>
+                            <constraint firstItem="195-ou-vCJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-124.5" id="LX9-7S-w8g"/>
+                            <constraint firstItem="bmv-bh-fcO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qcv-rn-NU9"/>
+                            <constraint firstAttribute="trailing" secondItem="bmv-bh-fcO" secondAttribute="trailing" id="URR-zA-Ngp"/>
+                            <constraint firstItem="ybX-AM-1eR" firstAttribute="centerX" secondItem="195-ou-vCJ" secondAttribute="centerX" id="X9m-xV-uA2"/>
+                            <constraint firstItem="bmv-bh-fcO" firstAttribute="top" secondItem="GmB-Jp-dMP" secondAttribute="bottom" id="dv5-fI-f5U"/>
+                            <constraint firstItem="ybX-AM-1eR" firstAttribute="top" secondItem="195-ou-vCJ" secondAttribute="bottom" constant="32" id="xF9-w5-mpA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3pp-bq-rBx"/>
+                    <connections>
+                        <outlet property="createAccountButton" destination="GmB-Jp-dMP" id="yTL-ry-piI"/>
+                        <outlet property="returningUserButton" destination="bmv-bh-fcO" id="duN-Jd-1Ix"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="36"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="g7g-k1-5I1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gyE-dz-nlo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jox-zL-fn5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YrO-0D-DSk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rUg-cA-mx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logoPlaceholder" width="116" height="116"/>
+    </resources>
+</document>

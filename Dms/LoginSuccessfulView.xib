@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginSuccessfulView" customModule="Dms" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="QN7-BY-1Pi"/>
+                <outlet property="labelHeightConstraint" destination="AEW-el-mo4" id="SYy-f8-fC0"/>
+                <outlet property="loginImageView" destination="Ldy-df-bVP" id="5q8-MP-Lv5"/>
+                <outlet property="loginSuccessfulLabel" destination="xS7-G4-53D" id="W4F-tL-RRF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ldy-df-bVP">
+                    <rect key="frame" x="123" y="90" width="128" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="128" id="CPJ-cf-UB0"/>
+                        <constraint firstAttribute="height" constant="128" id="y0P-R7-4uU"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xS7-G4-53D" customClass="TitleLabel" customModule="Dms" customModuleProvider="target">
+                    <rect key="frame" x="30" y="280" width="315" height="0.0"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="AEW-el-mo4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ldy-df-bVP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="90" id="CDT-Fv-rI9"/>
+                <constraint firstItem="Ldy-df-bVP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Mvc-vy-Fak"/>
+                <constraint firstItem="xS7-G4-53D" firstAttribute="centerX" secondItem="Ldy-df-bVP" secondAttribute="centerX" id="N2Z-6K-SfY"/>
+                <constraint firstItem="xS7-G4-53D" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="i5e-vB-qjA"/>
+                <constraint firstAttribute="trailing" secondItem="xS7-G4-53D" secondAttribute="trailing" constant="30" id="mtJ-G7-W5S"/>
+                <constraint firstItem="xS7-G4-53D" firstAttribute="bottom" secondItem="Ldy-df-bVP" secondAttribute="bottom" constant="62" id="xAV-R5-dfA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="26.5" y="52.5"/>
+        </view>
+    </objects>
+</document>

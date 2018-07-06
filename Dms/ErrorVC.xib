@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ErrorVC" customModule="Dms" customModuleProvider="target">
+            <connections>
+                <outlet property="alertView" destination="mpl-MT-CM7" id="k74-mW-ouc"/>
+                <outlet property="borderLine" destination="HrM-7u-Dhc" id="W00-7E-dEh"/>
+                <outlet property="buttonBorder" destination="qwF-4e-jCC" id="e7u-lX-0CC"/>
+                <outlet property="continueButton" destination="ter-lO-amB" id="XjG-Mz-r7J"/>
+                <outlet property="stopButton" destination="0TV-8G-iob" id="aZY-N6-h2E"/>
+                <outlet property="stopProcessInfoLabel" destination="mLd-9q-4KE" id="CNw-FZ-Gyx"/>
+                <outlet property="stopProcessTitleLabel" destination="zbt-lC-DoD" id="MF1-6N-2xF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mpl-MT-CM7">
+                    <rect key="frame" x="15" y="217" width="345" height="233"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0TV-8G-iob" customClass="CustomButton" customModule="Dms" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="185" width="172" height="48"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="fBR-yJ-8uz"/>
+                            </constraints>
+                            <state key="normal" title="CANCEL"/>
+                            <connections>
+                                <action selector="noAction:" destination="-1" eventType="touchUpInside" id="7No-oG-D5r"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qwF-4e-jCC">
+                            <rect key="frame" x="172" y="185" width="1" height="48"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="NYP-w7-VdM"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ter-lO-amB" customClass="CustomButton" customModule="Dms" customModuleProvider="target">
+                            <rect key="frame" x="173" y="185" width="172" height="48"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="Nrg-RX-s1q"/>
+                            </constraints>
+                            <state key="normal" title="RESTART"/>
+                            <connections>
+                                <action selector="yesAction:" destination="-1" eventType="touchUpInside" id="y2f-c4-0rO"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HrM-7u-Dhc">
+                            <rect key="frame" x="0.0" y="184" width="345" height="1"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="Mfy-Ik-OCb"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Measurment Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbt-lC-DoD" customClass="TitleLabel" customModule="Dms" customModuleProvider="target">
+                            <rect key="frame" x="15" y="30" width="315" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="fe9-Yz-YuN"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Please retake your reading." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLd-9q-4KE" customClass="CheckBoxLabel" customModule="Dms" customModuleProvider="target">
+                            <rect key="frame" x="15" y="77" width="315" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="qwF-4e-jCC" firstAttribute="leading" secondItem="0TV-8G-iob" secondAttribute="trailing" id="0GJ-5n-bAg"/>
+                        <constraint firstItem="ter-lO-amB" firstAttribute="leading" secondItem="qwF-4e-jCC" secondAttribute="trailing" id="AGf-TY-xoi"/>
+                        <constraint firstItem="HrM-7u-Dhc" firstAttribute="leading" secondItem="mpl-MT-CM7" secondAttribute="leading" id="DuD-al-PH8"/>
+                        <constraint firstItem="zbt-lC-DoD" firstAttribute="leading" secondItem="mpl-MT-CM7" secondAttribute="leading" constant="15" id="Eiw-av-bDc"/>
+                        <constraint firstAttribute="height" constant="233" id="HPR-xB-Ms9"/>
+                        <constraint firstAttribute="trailing" secondItem="zbt-lC-DoD" secondAttribute="trailing" constant="15" id="HvA-TB-gAN"/>
+                        <constraint firstAttribute="trailing" secondItem="HrM-7u-Dhc" secondAttribute="trailing" id="IpS-tP-lOC"/>
+                        <constraint firstItem="ter-lO-amB" firstAttribute="top" secondItem="HrM-7u-Dhc" secondAttribute="bottom" id="JfT-VE-h1k"/>
+                        <constraint firstItem="0TV-8G-iob" firstAttribute="leading" secondItem="mpl-MT-CM7" secondAttribute="leading" id="LwQ-Vw-smo"/>
+                        <constraint firstItem="mLd-9q-4KE" firstAttribute="leading" secondItem="mpl-MT-CM7" secondAttribute="leading" constant="15" id="Nzi-2k-v7d"/>
+                        <constraint firstAttribute="bottom" secondItem="qwF-4e-jCC" secondAttribute="bottom" id="QJx-fw-nML"/>
+                        <constraint firstItem="mLd-9q-4KE" firstAttribute="top" secondItem="zbt-lC-DoD" secondAttribute="bottom" constant="15" id="RSX-0v-Gda"/>
+                        <constraint firstAttribute="trailing" secondItem="ter-lO-amB" secondAttribute="trailing" id="U1r-Sd-ELq"/>
+                        <constraint firstAttribute="bottom" secondItem="0TV-8G-iob" secondAttribute="bottom" id="epR-U7-bec"/>
+                        <constraint firstItem="0TV-8G-iob" firstAttribute="width" secondItem="ter-lO-amB" secondAttribute="width" id="fV9-zT-RIG"/>
+                        <constraint firstItem="zbt-lC-DoD" firstAttribute="top" secondItem="mpl-MT-CM7" secondAttribute="top" constant="30" id="haA-0W-mf9"/>
+                        <constraint firstAttribute="bottom" secondItem="ter-lO-amB" secondAttribute="bottom" id="knV-n8-YSo"/>
+                        <constraint firstItem="ter-lO-amB" firstAttribute="leading" secondItem="0TV-8G-iob" secondAttribute="trailing" constant="1" id="sEN-pP-exS"/>
+                        <constraint firstAttribute="trailing" secondItem="mLd-9q-4KE" secondAttribute="trailing" constant="15" id="uCI-zV-3iQ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="mpl-MT-CM7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="BQ8-Jh-qHq"/>
+                <constraint firstAttribute="trailing" secondItem="mpl-MT-CM7" secondAttribute="trailing" constant="15" id="cvc-oK-U0j"/>
+                <constraint firstItem="mpl-MT-CM7" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="joG-jj-A9H"/>
+            </constraints>
+            <point key="canvasLocation" x="55.5" y="59.5"/>
+        </view>
+    </objects>
+</document>

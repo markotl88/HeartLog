@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PeriodCollectionCell" id="gTV-IL-0wX" customClass="PeriodCollectionCell" customModule="Dms" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="93" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="93" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SSp-gA-ilB">
+                        <rect key="frame" x="0.0" y="48.5" width="93" height="1.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1.5" id="sne-dL-iSM"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YP7-Wg-GeD">
+                        <rect key="frame" x="0.0" y="47" width="93" height="3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="3" id="MjI-cS-375"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Iys-LC-i4x" customClass="ResultActivityLabel" customModule="Dms" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="17" width="93" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="Qfa-tr-qvr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="YP7-Wg-GeD" secondAttribute="trailing" id="2WV-Wm-G4q"/>
+                <constraint firstItem="YP7-Wg-GeD" firstAttribute="top" secondItem="Iys-LC-i4x" secondAttribute="bottom" constant="15" id="9Zq-o7-kjo"/>
+                <constraint firstAttribute="trailing" secondItem="SSp-gA-ilB" secondAttribute="trailing" id="FlI-7q-j2u"/>
+                <constraint firstItem="Iys-LC-i4x" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="RBZ-tM-TTa"/>
+                <constraint firstAttribute="trailing" secondItem="Iys-LC-i4x" secondAttribute="trailing" id="b2v-sE-zW3"/>
+                <constraint firstItem="Iys-LC-i4x" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="17" id="iIg-gx-SXI"/>
+                <constraint firstAttribute="bottom" secondItem="YP7-Wg-GeD" secondAttribute="bottom" id="jjo-hO-nl6"/>
+                <constraint firstItem="YP7-Wg-GeD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="l1P-no-Ga2"/>
+                <constraint firstAttribute="bottom" secondItem="SSp-gA-ilB" secondAttribute="bottom" id="pwM-MU-W6d"/>
+                <constraint firstItem="SSp-gA-ilB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="waB-3S-edX"/>
+            </constraints>
+            <connections>
+                <outlet property="periodIndicatorView" destination="YP7-Wg-GeD" id="PCq-Qv-qZu"/>
+                <outlet property="periodLabel" destination="Iys-LC-i4x" id="kp9-pz-Mrj"/>
+                <outlet property="separatorView" destination="SSp-gA-ilB" id="NgG-pi-drR"/>
+            </connections>
+            <point key="canvasLocation" x="62.5" y="59"/>
+        </collectionViewCell>
+    </objects>
+</document>
