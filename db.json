@@ -1,0 +1,18 @@
+{
+  "bloodpressure": {
+    "user": "",
+    "source": "ihealth",
+    "id": "",
+    "meta_incomplete": false,
+    "systolic": 129,
+    "validated": true,
+    "utc_offset": "+02:00",
+    "timestamp": "2018-07-08T02:04:40.025",
+    "resting_heartrate": 62,
+    "diastolic": 83,
+    "activity_category": "light",
+    "note": "Pozz",
+    "mood": "happy",
+    "last_updated": "2018-07-08T02:04:51.721"
+  }
+}

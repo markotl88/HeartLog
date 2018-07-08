@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VzR-Ul-H9W">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--BroadReadings-->
-        <scene sceneID="u9p-dg-HrD">
-            <objects>
-                <viewControllerPlaceholder storyboardName="BroadReadings" id="B3L-FU-2KP" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bpi-GK-0gZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5566" y="1331"/>
-        </scene>
         <!--Forgot Password WebVC-->
         <scene sceneID="W1y-WZ-Bdu">
             <objects>
@@ -24,7 +20,7 @@
                         <viewControllerLayoutGuide type="bottom" id="0sx-gL-NJ5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pCs-vV-WgS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -43,11 +39,11 @@
                         <viewControllerLayoutGuide type="bottom" id="32S-sQ-w41"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PYs-9E-skH">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcH-OO-E9g" customClass="CustomButton" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="530" width="600" height="70"/>
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="JRE-fl-qr9"/>
                                 </constraints>
@@ -57,10 +53,10 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8LB-dg-rRw">
-                                <rect key="frame" x="0.0" y="20" width="600" height="510"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="577"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="IIi-nq-afH">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rGBNoteworthNavy" translatesAutoresizingMaskIntoConstraints="NO" id="3iG-JG-Sq4">
@@ -79,10 +75,10 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoginCell" rowHeight="169" id="yZ6-Wo-0iO" customClass="LoginCell" customModule="Dms" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="108" width="600" height="169"/>
+                                        <rect key="frame" x="0.0" y="108" width="375" height="169"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yZ6-Wo-0iO" id="WCD-cK-031">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="168.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="168.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Zh-lJ-eXi" customClass="InputTextField" customModule="Dms" customModuleProvider="target">
@@ -116,10 +112,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ForgotPasswordCell" rowHeight="62" id="vcO-pC-ZDv" customClass="ForgotPasswordCell" customModule="Dms" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="277" width="600" height="62"/>
+                                        <rect key="frame" x="0.0" y="277" width="375" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vcO-pC-ZDv" id="p8k-t8-mf8">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="61.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="61.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKQ-eH-iS0" customClass="CustomButton" customModule="Dms" customModuleProvider="target">
@@ -178,7 +174,6 @@
                         <outlet property="bottomConstraint" destination="saX-dI-geD" id="Iu0-cF-i81"/>
                         <outlet property="signInButton" destination="VcH-OO-E9g" id="uVE-Ks-0BU"/>
                         <outlet property="tableView" destination="8LB-dg-rRw" id="h5z-Mk-HJD"/>
-                        <segue destination="B3L-FU-2KP" kind="presentation" identifier="goToMainMenu" id="abY-b5-93J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U8K-6T-Diw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -194,11 +189,11 @@
                         <viewControllerLayoutGuide type="bottom" id="eJj-Mq-l2r"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9OZ-8L-fLG">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="z9a-uz-Ycs" customClass="SubtitleLabel" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="20" y="163" width="560" height="120"/>
+                                <rect key="frame" x="20" y="163" width="335" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="995" constant="120" id="HoN-0c-NP9"/>
                                 </constraints>
@@ -208,7 +203,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gt9-l0-SFy" customClass="CustomButton" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="530" width="600" height="70"/>
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="uyx-19-rA5"/>
                                 </constraints>
@@ -219,14 +214,14 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MQg-Mb-DI3">
-                                <rect key="frame" x="242" y="64" width="116" height="74"/>
+                                <rect key="frame" x="129.5" y="64" width="116" height="74"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="800" constant="74" id="Gp2-Bs-d2f"/>
                                     <constraint firstAttribute="width" secondItem="MQg-Mb-DI3" secondAttribute="height" multiplier="58:37" id="HSx-VO-R0n"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ClF-we-7Pp" customClass="InputTextField" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="288" width="600" height="100"/>
+                                <rect key="frame" x="0.0" y="288" width="375" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Stw-7f-Lxh"/>
@@ -269,11 +264,11 @@
                         <viewControllerLayoutGuide type="bottom" id="dSo-lI-7uI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="leN-5V-3mf">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkD-AI-GGf" customClass="CustomButton" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="530" width="600" height="70"/>
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="iIT-Nh-5yX"/>
                                 </constraints>
@@ -283,7 +278,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgv-46-R2B" customClass="CustomButton" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="460" width="600" height="70"/>
+                                <rect key="frame" x="0.0" y="527" width="375" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="fx9-5d-LLM"/>
                                 </constraints>
@@ -293,7 +288,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HeartLog" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8B-ot-lqc">
-                                <rect key="frame" x="40" y="221" width="520" height="20"/>
+                                <rect key="frame" x="40" y="254.5" width="295" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -332,17 +327,17 @@
                         <viewControllerLayoutGuide type="bottom" id="3hg-Ao-0dr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VCd-FL-WP0">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rGBNoteworthNavy" translatesAutoresizingMaskIntoConstraints="NO" id="nQF-cP-EmT">
-                                <rect key="frame" x="0.0" y="16" width="600" height="118"/>
+                                <rect key="frame" x="0.0" y="16" width="375" height="118"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="118" id="b6m-ny-lZN"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4wJ-5d-85J" customClass="TitleLabel" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="30" y="178.5" width="540" height="64"/>
+                                <rect key="frame" x="30" y="212" width="315" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="FRT-t4-Hrv"/>
                                 </constraints>
@@ -353,7 +348,7 @@ Welcome to Noteworth.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take charge of your health." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FgZ-e4-PCm" customClass="TitleLabel" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="30" y="270.5" width="540" height="24"/>
+                                <rect key="frame" x="30" y="304" width="315" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="qSO-Qw-cpf"/>
                                 </constraints>
@@ -362,7 +357,7 @@ Welcome to Noteworth.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EIY-eL-4Oc" customClass="CustomButton" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="466" width="600" height="70"/>
+                                <rect key="frame" x="0.0" y="533" width="375" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="tUb-6P-E9k"/>
                                 </constraints>
@@ -411,11 +406,11 @@ Welcome to Noteworth.</string>
                         <viewControllerLayoutGuide type="bottom" id="m8c-YQ-aes"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MU2-8F-ySO">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your verification code:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="6MF-gc-9lc" customClass="SubtitleLabel" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="67" y="15" width="465" height="48"/>
+                                <rect key="frame" x="67" y="15" width="240" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="kaj-o3-nBW"/>
                                 </constraints>
@@ -424,14 +419,14 @@ Welcome to Noteworth.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70Q-Fv-XAI" customClass="TextFieldBottomLine" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="30" y="136.5" width="540" height="100"/>
+                                <rect key="frame" x="30" y="170" width="315" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="hfh-09-MXk"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTm-iS-sYy" customClass="CustomButton" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="466" width="600" height="70"/>
+                                <rect key="frame" x="0.0" y="533" width="375" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="H0g-PD-cKg"/>
                                 </constraints>
@@ -443,7 +438,7 @@ Welcome to Noteworth.</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sC-lM-fiO" customClass="CustomButton" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="219.5" y="265.5" width="160" height="30"/>
+                                <rect key="frame" x="107" y="299" width="160" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="Aqz-kO-KZq"/>
                                     <constraint firstAttribute="height" constant="30" id="Lj3-mx-cev"/>
@@ -494,11 +489,11 @@ Welcome to Noteworth.</string>
                         <viewControllerLayoutGuide type="bottom" id="OSH-zT-5IU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KfH-NT-TYP">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWp-tN-Mie" customClass="CustomButton" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="466" width="600" height="70"/>
+                                <rect key="frame" x="0.0" y="533" width="375" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="lTs-Kb-mMi"/>
                                 </constraints>
@@ -510,10 +505,10 @@ Welcome to Noteworth.</string>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HhL-NG-3jL">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="466"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="533"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="3zx-FL-RkZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="236"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="236"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Creation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5Rc-Mw-5sj" customClass="TitleLabel" customModule="Dms" customModuleProvider="target">
@@ -556,10 +551,10 @@ Welcome to Noteworth.</string>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DeviceCell" rowHeight="88" id="SdG-P1-FGz" customClass="DeviceCell" customModule="Dms" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="264" width="600" height="88"/>
+                                        <rect key="frame" x="0.0" y="264" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SdG-P1-FGz" id="P4f-ML-TG7">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="87.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9Ue-mt-GY4" customClass="PlaceholderLabel" customModule="Dms" customModuleProvider="target">
@@ -653,11 +648,11 @@ Welcome to Noteworth.</string>
                         <viewControllerLayoutGuide type="bottom" id="VVo-DB-7cc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Daz-ow-DAm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your phone, we will be sending you a verification code." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tPX-uF-Nhk" customClass="SubtitleLabel" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="16" y="15" width="568" height="72"/>
+                                <rect key="frame" x="16" y="15" width="343" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="OTy-PX-NGj"/>
                                 </constraints>
@@ -666,14 +661,14 @@ Welcome to Noteworth.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Qr-l7-YfT" customClass="MaskTextFieldBottomLine" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="30" y="136.5" width="540" height="100"/>
+                                <rect key="frame" x="30" y="170" width="315" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="995" constant="100" id="LpV-oP-RFM"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aq7-0u-aha" customClass="CustomButton" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="466" width="600" height="70"/>
+                                <rect key="frame" x="0.0" y="533" width="375" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="4dB-ul-5wt"/>
                                 </constraints>
@@ -721,11 +716,11 @@ Welcome to Noteworth.</string>
                         <viewControllerLayoutGuide type="bottom" id="45a-rj-BtN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2sM-it-mYY">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2V-Wr-Bae" customClass="CustomButton" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="466" width="600" height="70"/>
+                                <rect key="frame" x="0.0" y="533" width="375" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="P3A-HZ-4kv"/>
                                 </constraints>
@@ -737,10 +732,10 @@ Welcome to Noteworth.</string>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nWu-rf-m4b">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="466"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="533"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="5Wx-Qz-SvM">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="62"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Creation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="W97-Pf-zok" customClass="TitleLabel" customModule="Dms" customModuleProvider="target">
@@ -760,10 +755,10 @@ Welcome to Noteworth.</string>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CheckboxCell" rowHeight="75" id="4vn-OM-0qR" customClass="CheckboxCell" customModule="Dms" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="90" width="600" height="75"/>
+                                        <rect key="frame" x="0.0" y="90" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4vn-OM-0qR" id="zLM-TS-twn">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="74.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNN-K0-QDs" customClass="CustomButton" customModule="Dms" customModuleProvider="target">
@@ -801,10 +796,10 @@ Welcome to Noteworth.</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserInfoCell" rowHeight="421" id="nUg-jf-j82" customClass="UserInfoCell" customModule="Dms" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="165" width="600" height="421"/>
+                                        <rect key="frame" x="0.0" y="165" width="375" height="421"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nUg-jf-j82" id="pu6-lN-4bJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="420.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="420.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B7W-L5-ynU" customClass="InputTextField" customModule="Dms" customModuleProvider="target">
@@ -937,18 +932,18 @@ Welcome to Noteworth.</string>
                         <viewControllerLayoutGuide type="bottom" id="2Cp-ew-Zpw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rFJ-Jz-T4Y">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLW-9u-5Lu" customClass="CustomButton" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="530" width="600" height="70"/>
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="PJ1-2t-1Xc"/>
                                 </constraints>
                                 <state key="normal" title="GET STARTED"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's All About You" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaG-vV-RsP" customClass="TitleLabel" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="30" y="51" width="540" height="32"/>
+                                <rect key="frame" x="30" y="51" width="315" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="jjG-Aa-QwK"/>
                                 </constraints>
@@ -957,7 +952,7 @@ Welcome to Noteworth.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7oT-6v-CQn" customClass="SubtitleLabel" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="30" y="340" width="540" height="144"/>
+                                <rect key="frame" x="30" y="407" width="315" height="144"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="144" id="uEn-ug-8Xk"/>
                                 </constraints>
@@ -970,7 +965,7 @@ Because the more your doctor knows, the better they can care for you.
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="page1" translatesAutoresizingMaskIntoConstraints="NO" id="uVb-fB-i0Z">
-                                <rect key="frame" x="250.5" y="185.5" width="98" height="128"/>
+                                <rect key="frame" x="138" y="219" width="98" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="98" id="693-PU-AkK"/>
                                     <constraint firstAttribute="height" constant="128" id="HeZ-xH-5lf"/>
@@ -1013,11 +1008,11 @@ Because the more your doctor knows, the better they can care for you.
                         <viewControllerLayoutGuide type="bottom" id="rXN-VZ-AbO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EUZ-GJ-TiK">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your registration code below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Awx-Sq-Iu5" customClass="SubtitleLabel" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="16" y="15" width="568" height="48"/>
+                                <rect key="frame" x="16" y="15" width="343" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="zgI-oF-g8j"/>
                                 </constraints>
@@ -1026,21 +1021,21 @@ Because the more your doctor knows, the better they can care for you.
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Asn-II-NhX" customClass="TextFieldBottomLine" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="30" y="136.5" width="540" height="100"/>
+                                <rect key="frame" x="30" y="170" width="315" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Paf-pR-6rB"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="postcardReg" translatesAutoresizingMaskIntoConstraints="NO" id="KMA-3A-x9e">
-                                <rect key="frame" x="224.5" y="244.5" width="152" height="180.5"/>
+                                <rect key="frame" x="112" y="278" width="152" height="214"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="KMA-3A-x9e" secondAttribute="height" multiplier="76:107" priority="750" id="AGe-8T-JGg"/>
                                     <constraint firstAttribute="width" constant="152" id="vnk-w6-Jtg"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7np-tY-a6X" customClass="CustomButton" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="466" width="600" height="70"/>
+                                <rect key="frame" x="0.0" y="533" width="375" height="70"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="8DJ-3u-86S"/>
@@ -1110,11 +1105,11 @@ Because the more your doctor knows, the better they can care for you.
                         <viewControllerLayoutGuide type="bottom" id="QCV-Ry-LtR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iDq-y4-8AF">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set your activity goal" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f5H-5a-UYK" customClass="TitleLabel" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="30" y="15" width="540" height="32"/>
+                                <rect key="frame" x="30" y="15" width="315" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="P4f-oT-HQm"/>
                                 </constraints>
@@ -1123,7 +1118,7 @@ Because the more your doctor knows, the better they can care for you.
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Being active goes beyond steps. We can help you track your fitness." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5uA-yH-Spy" customClass="SubtitleLabel" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="20" y="64" width="560" height="63"/>
+                                <rect key="frame" x="20" y="64" width="335" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="U7v-EU-Zke"/>
                                 </constraints>
@@ -1132,7 +1127,7 @@ Because the more your doctor knows, the better they can care for you.
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUb-bk-yu6" customClass="CustomButton" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="466" width="600" height="70"/>
+                                <rect key="frame" x="0.0" y="533" width="375" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="22g-JX-JNf"/>
                                 </constraints>
@@ -1144,31 +1139,31 @@ Because the more your doctor knows, the better they can care for you.
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lo4-U5-8JR">
-                                <rect key="frame" x="0.0" y="236" width="600" height="230"/>
+                                <rect key="frame" x="0.0" y="236" width="375" height="297"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconActivityRunSelected" translatesAutoresizingMaskIntoConstraints="NO" id="Lr8-dI-OHH">
-                                        <rect key="frame" x="260.5" y="61.5" width="80" height="80"/>
+                                        <rect key="frame" x="148" y="95" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="9w7-CR-Mvd"/>
                                             <constraint firstAttribute="width" constant="80" id="ESX-S0-X5L"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconActivityWalkSelected" translatesAutoresizingMaskIntoConstraints="NO" id="e9d-FC-aUv">
-                                        <rect key="frame" x="25" y="61.5" width="80" height="80"/>
+                                        <rect key="frame" x="25" y="95" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="sPf-oL-7eg"/>
                                             <constraint firstAttribute="height" constant="80" id="xm3-jK-RVQ"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconActivitySwimSelected" translatesAutoresizingMaskIntoConstraints="NO" id="XZW-AB-m5i">
-                                        <rect key="frame" x="495" y="61.5" width="80" height="80"/>
+                                        <rect key="frame" x="270" y="95" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="rEx-c3-vMb"/>
                                             <constraint firstAttribute="width" constant="80" id="zcV-Pf-ZKx"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Walk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzh-bY-BzX" customClass="ActivityLabel" customModule="Dms" customModuleProvider="target">
-                                        <rect key="frame" x="43" y="156.5" width="45" height="19"/>
+                                        <rect key="frame" x="43" y="190" width="45" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="3lh-Un-MU9"/>
                                             <constraint firstAttribute="height" constant="19" id="hrh-D2-kAD"/>
@@ -1178,7 +1173,7 @@ Because the more your doctor knows, the better they can care for you.
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Run" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cK7-KR-cOF" customClass="ActivityLabel" customModule="Dms" customModuleProvider="target">
-                                        <rect key="frame" x="282.5" y="156.5" width="45" height="19"/>
+                                        <rect key="frame" x="170" y="190" width="45" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="19" id="Qnl-tR-4eQ"/>
                                             <constraint firstAttribute="width" constant="45" id="drp-Rm-tOh"/>
@@ -1188,7 +1183,7 @@ Because the more your doctor knows, the better they can care for you.
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swim" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjj-Mg-VYt" customClass="ActivityLabel" customModule="Dms" customModuleProvider="target">
-                                        <rect key="frame" x="508" y="156.5" width="55" height="19"/>
+                                        <rect key="frame" x="283" y="190" width="55" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="55" id="I9k-lC-Xb5"/>
                                             <constraint firstAttribute="height" constant="19" id="UeD-cn-6pU"/>
@@ -1198,7 +1193,7 @@ Because the more your doctor knows, the better they can care for you.
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 hr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6u-Ol-PeF" customClass="DurationLabel" customModule="Dms" customModuleProvider="target">
-                                        <rect key="frame" x="37" y="177.5" width="56" height="24"/>
+                                        <rect key="frame" x="37" y="211" width="56" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="56" id="bFD-eO-mEq"/>
                                             <constraint firstAttribute="height" constant="24" id="fYU-ZJ-ze9"/>
@@ -1208,7 +1203,7 @@ Because the more your doctor knows, the better they can care for you.
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 mins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzl-1l-qD3" customClass="DurationLabel" customModule="Dms" customModuleProvider="target">
-                                        <rect key="frame" x="272.5" y="177.5" width="64" height="24"/>
+                                        <rect key="frame" x="160" y="211" width="64" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="64" id="1RR-20-yvx"/>
                                             <constraint firstAttribute="height" constant="24" id="KO7-wQ-AVF"/>
@@ -1218,7 +1213,7 @@ Because the more your doctor knows, the better they can care for you.
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ways to hit your activity goal:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXe-HS-fKA" customClass="PlaceholderLabel" customModule="Dms" customModuleProvider="target">
-                                        <rect key="frame" x="41" y="30" width="518" height="21"/>
+                                        <rect key="frame" x="41" y="30" width="293" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="ccP-4N-ob7"/>
                                         </constraints>
@@ -1227,7 +1222,7 @@ Because the more your doctor knows, the better they can care for you.
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 mins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgm-f5-0gu" customClass="DurationLabel" customModule="Dms" customModuleProvider="target">
-                                        <rect key="frame" x="501" y="177.5" width="68" height="24"/>
+                                        <rect key="frame" x="276" y="211" width="68" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="O3U-Ds-Rwr"/>
                                             <constraint firstAttribute="width" constant="68" id="k6B-wU-bon"/>
@@ -1264,16 +1259,16 @@ Because the more your doctor knows, the better they can care for you.
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Evj-Tm-VJ4" userLabel="buttonContainer">
-                                <rect key="frame" x="0.0" y="161" width="600" height="75"/>
+                                <rect key="frame" x="0.0" y="161" width="375" height="75"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmC-V7-LgY">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="75"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="75"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQm-5Q-JQM">
-                                        <rect key="frame" x="200" y="0.0" width="200" height="75"/>
+                                        <rect key="frame" x="125" y="0.0" width="125" height="75"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AjJ-Wh-a7M">
-                                        <rect key="frame" x="400" y="0.0" width="200" height="75"/>
+                                        <rect key="frame" x="250" y="0.0" width="125" height="75"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1345,11 +1340,11 @@ Because the more your doctor knows, the better they can care for you.
                         <viewControllerLayoutGuide type="bottom" id="W8e-Xd-4xs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BUV-ms-0sY">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Now-wE-zch" customClass="CustomButton" customModule="Dms" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="466" width="600" height="70"/>
+                                <rect key="frame" x="0.0" y="533" width="375" height="70"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="70k-h8-L8d"/>
@@ -1362,10 +1357,10 @@ Because the more your doctor knows, the better they can care for you.
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oYz-jw-w3s">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="466"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="533"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="xtB-fI-85T">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="140"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Creation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8I-NA-t5t" customClass="TitleLabel" customModule="Dms" customModuleProvider="target">
@@ -1399,10 +1394,10 @@ personal information:</string>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeightCell" rowHeight="56" id="Dux-qa-CzY" customClass="HeightCell" customModule="Dms" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="168" width="600" height="56"/>
+                                        <rect key="frame" x="0.0" y="168" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dux-qa-CzY" id="biS-0B-kvN">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKM-Eo-r5t" customClass="UserAttributeLabel" customModule="Dms" customModuleProvider="target">
@@ -1450,10 +1445,10 @@ personal information:</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GenderCell" rowHeight="56" id="Vrb-dt-0YS" customClass="GenderCell" customModule="Dms" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="224" width="600" height="56"/>
+                                        <rect key="frame" x="0.0" y="224" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vrb-dt-0YS" id="GWv-0h-fjZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfl-fV-Ipu" customClass="UserAttributeLabel" customModule="Dms" customModuleProvider="target">
@@ -1536,10 +1531,10 @@ personal information:</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BirthdayCell" rowHeight="56" id="1ck-rY-9qk" customClass="BirthdayCell" customModule="Dms" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="280" width="600" height="56"/>
+                                        <rect key="frame" x="0.0" y="280" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1ck-rY-9qk" id="dcT-21-LBR">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8HF-qc-toE" customClass="UserAttributeLabel" customModule="Dms" customModuleProvider="target">
@@ -1587,10 +1582,10 @@ personal information:</string>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeightCell" rowHeight="56" id="T2L-cw-DTe" customClass="WeightCell" customModule="Dms" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="336" width="600" height="56"/>
+                                        <rect key="frame" x="0.0" y="336" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T2L-cw-DTe" id="cKi-cC-me7">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qD7-ep-53s" customClass="UserAttributeLabel" customModule="Dms" customModuleProvider="target">
@@ -1659,7 +1654,6 @@ personal information:</string>
                         <outlet property="finishButton" destination="Now-wE-zch" id="km4-OS-Au5"/>
                         <outlet property="personalInformationTitle" destination="K8I-NA-t5t" id="tyh-1J-0x2"/>
                         <outlet property="tableView" destination="oYz-jw-w3s" id="zQb-IK-Thc"/>
-                        <segue destination="B3L-FU-2KP" kind="presentation" identifier="goToHome" id="OU8-J8-vnP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H9Z-Cs-bxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1681,7 +1675,4 @@ personal information:</string>
         <image name="radioOff" width="24" height="24"/>
         <image name="radioOn" width="24" height="24"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="abY-b5-93J"/>
-    </inferredMetricsTieBreakers>
 </document>

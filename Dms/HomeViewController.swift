@@ -40,7 +40,8 @@ final class HomeViewController: CommonVC, StoryboardInitializable {
                 
                 DispatchQueue.main.async {
                     if success {
-                        AppCoordinator.shared.setBloodPressureListAsRoot()
+                        self.startLoading()
+                        (UIApplication.shared.delegate as! AppDelegate).fillCoreData()
                     } else if let authenticationError = authenticationError as? LAError {
                         
                         print("Auth error: \(authenticationError.localizedDescription)")
@@ -69,6 +70,13 @@ final class HomeViewController: CommonVC, StoryboardInitializable {
         super.viewWillAppear(animated)
         setNavigation()
         (UIApplication.shared.delegate as! AppDelegate).setStatusBarColor(light: true)
+        NotificationCenter.default.addObserver(self, selector: #selector(fetchFinished), name: NSNotification.Name(rawValue: NotificationNames.fetchFinished), object: nil)
+
+    }
+    
+    func fetchFinished() {
+        self.stopLoading()
+        AppCoordinator.shared.setBloodPressureListAsRoot()
     }
     
     func setNavigation(){

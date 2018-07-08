@@ -218,37 +218,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("Failed to register push notifications")
         print("Error: \(error.localizedDescription)")
     }
-    
-//    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-//        if self.window?.rootViewController?.presentedViewController is ActivityPageMenuVC {
-//            let firstVC = self.window?.rootViewController?.presentedViewController as! ActivityPageMenuVC
-//            
-//            if firstVC.isBeingPresented {
-//                return UIInterfaceOrientationMask.portrait
-//            }
-//        }
-//        
-//        if self.window?.rootViewController?.presentedViewController is LandscapeVC {
-//            let secondVC = self.window?.rootViewController?.presentedViewController as! LandscapeVC
-//            
-//            if secondVC.isBeingPresented {
-//                return UIInterfaceOrientationMask.landscape
-//            }
-//        }else{
-//            return UIInterfaceOrientationMask.allButUpsideDown
-//        }
-//        
-////        if self.window?.rootViewController?.presentedViewController is BPHistoryVC {
-////            let bpHistoryVc = self.window?.rootViewController?.presentedViewController as! BPHistoryVC
-////            
-////            if bpHistoryVc.isBeingPresented {
-////                return UIInterfaceOrientationMask.allButUpsideDown
-////            }
-////        }
-//        
-//        return UIInterfaceOrientationMask.allButUpsideDown
-//        
-//    }
 }
 
 extension AppDelegate {
@@ -276,7 +245,7 @@ extension AppDelegate {
             group.notify(queue: queue) {
                 // This closure will be executed when all tasks are complete
                 DispatchQueue.main.async {
-                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: NotificationNames.fetchFinished), object: nil)
+                    self.syncCoreDataAndServer()
                 }
             }
             defaults.set(true, forKey: UserDefaultsStrings.coreDataFilled)
@@ -324,6 +293,7 @@ extension AppDelegate {
         group.notify(queue: queue) {
             // This closure will be executed when all tasks are complete
             print("All tasks complete - Core data synced with server")
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: NotificationNames.fetchFinished), object: nil)
             self.syncingStarted = false
         }
     }

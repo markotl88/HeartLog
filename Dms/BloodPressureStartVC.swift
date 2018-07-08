@@ -66,11 +66,6 @@ final class BloodPressureStartVC: CommonVC, CBCentralManagerDelegate, Storyboard
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToBPHistory" {
-            if let destVC = segue.destination as? BPHistoryVC {
-                destVC.delegate = self
-            }
-        }
         if segue.identifier == "goToManualEntry" {
             if let navVC = segue.destination as? UINavigationController {
                 if let destVC = navVC.topViewController as? BPManualEntryVC {
@@ -92,7 +87,7 @@ final class BloodPressureStartVC: CommonVC, CBCentralManagerDelegate, Storyboard
     }
     
     func goToHistory(){
-        self.performSegue(withIdentifier: "goToBPHistory", sender: self)
+        self.dismiss(animated: true, completion: nil)
     }
 
     func updateViews(){

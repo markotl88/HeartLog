@@ -45,36 +45,15 @@ struct iHealthCredentials {
 
 struct RestUrl {
     
-    //Staging
-//    static let baseUrl = "https://staging-app.noteworth.com/api/"
     
     //Production:
-    static let baseUrl = "https://app.noteworth.com/api/"
+    static let baseUrl = "http://192.168.0.10:3000/"
     
     //Patients
     static let createTestPatient = baseUrl + "patients/create_test"
     static let getAuthHeader = baseUrl + "api-token-auth/"
 
-    static let notificationSettings = baseUrl + "notification-settings"
-    static let users = baseUrl + "users/me"
-    static let patients = baseUrl + "patients/me"
-    static let devices = baseUrl + "devices"
-    static let device = baseUrl + "device"
-    static let registerPushNotifications = baseUrl + "notification-settings"
-
-    static let disclaimerConsents = baseUrl + "disclaimer-consents"
-
-    static let readings = baseUrl + "readings"
-    static let bloodPressureReadings = readings + "/heart"
-    static let glucoseReadings = readings + "/glucose"
-    static let fitnessReadings = readings + "/fitness"
-    static let nutritionReadings = readings + "/nutrition"
-    static let sleepReadings = readings + "/sleep"
-    static let weightReadings = readings + "/weight"
-    static let routineReadings = readings + "/routine"
-    
-    static let clarityHistory = baseUrl + "patients/clarity_score_history"
-    static let healthCarePartners = baseUrl + "clarity-partners"
+    static let bloodPressureReadings = baseUrl + "bloodpressure"
 
 }
 

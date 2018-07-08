@@ -33,9 +33,10 @@ class AppCoordinator {
         setNavigationRootViewController(homeViewController)
     }
     
-    func showBPMeasuringViewController(bpDeviceInstance: BP7?) {
+    func showBPMeasuringViewController(bpMonitorController: BPMonitorController) {
         let bpMeasuringViewController = BPMeasuringVC.makeFromHomeStoryboard()
-        bpMeasuringViewController.bpDeviceInstance = bpDeviceInstance
+        bpMeasuringViewController.bpMonitorController = bpMonitorController
+        bpMeasuringViewController.bpMonitorController.delegate = bpMeasuringViewController
         navigationController?.pushViewController(bpMeasuringViewController, animated: true)
     }
     

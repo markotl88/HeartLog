@@ -1,0 +1,58 @@
+{
+  "bloodpressure": {
+    "count": 3,
+    "next": null,
+    "previous": null,
+    "error": null,
+    "results": [
+      {
+        "id": "1",
+        "source": "device",
+        "timestamp": "2018-06-26T14:21:51.236",
+        "user": "1",
+        "utc_offset": "+02:00",
+        "last_updated": "2018-06-27T14:21:51.236",
+        "note": "After coffee and lunch",
+        "systolic": 124,
+        "diastolic": 85,
+        "resting_heartrate": 76,
+        "mood": "happy",
+        "activity_category": "caffeine",
+        "meta_incomplete": false,
+        "validated": true
+      },
+      {
+        "id": "2",
+        "source": "device",
+        "timestamp": "2018-06-30T04:21:51.236",
+        "user": "1",
+        "utc_offset": "+02:00",
+        "last_updated": "2018-06-30T04:21:51.236",
+        "note": "Before breakfast",
+        "systolic": 118,
+        "diastolic": 78,
+        "resting_heartrate": 60,
+        "mood": "neutral",
+        "activity_category": "light",
+        "meta_incomplete": false,
+        "validated": true
+      },
+      {
+        "id": "3",
+        "source": "manual",
+        "timestamp": "2018-07-03T22:15:51.236",
+        "user": "1",
+        "utc_offset": "+02:00",
+        "last_updated": "2018-07-03T22:15:51.236",
+        "note": "Before breakfast",
+        "systolic": 130,
+        "diastolic": 84,
+        "resting_heartrate": 79,
+        "mood": "sad",
+        "activity_category": "heavy",
+        "meta_incomplete": false,
+        "validated": false
+      }
+    ]
+  }
+}

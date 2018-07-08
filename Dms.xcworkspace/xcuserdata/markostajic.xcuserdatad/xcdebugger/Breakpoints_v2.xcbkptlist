@@ -490,11 +490,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Dms/EditBPEntryVC.swift"
-            timestampString = "552528140.539812"
+            timestampString = "552592388.801017"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "doneAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -617,13 +617,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Dms/BloodPressureStartVC.swift"
-            timestampString = "552528140.5401731"
+            filePath = "DataManager.swift"
+            timestampString = "552590098.4323339"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "goToBloodPressureMeasuring()"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getBloodPressureReadings(url:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -633,13 +633,77 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Dms/BloodPressureStartVC.swift"
-            timestampString = "552528140.540216"
+            filePath = "DataManager.swift"
+            timestampString = "552590098.432655"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "goToBloodPressureMeasuring()"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "getBloodPressureReadings(url:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Dms.DataManager.getBloodPressureReadings(url: Swift.Optional&lt;Swift.String&gt;, completion: (Dms.BloodPressureReadingsResponse) -&gt; ()) -&gt; ()"
+                  moduleName = "Dms"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markostajic/Desktop/HeartLog/DataManager.swift"
+                  timestampString = "552708060.534459"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "304">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Any&gt;, Swift.Optional&lt;Foundation.Data&gt;, Swift.Bool) -&gt; () in Dms.DataManager.getBloodPressureReadings(url: Swift.Optional&lt;Swift.String&gt;, completion: (Dms.BloodPressureReadingsResponse) -&gt; ()) -&gt; ()"
+                  moduleName = "Dms"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markostajic/Desktop/HeartLog/DataManager.swift"
+                  timestampString = "552708060.536059"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DataManager.swift"
+            timestampString = "552590098.432848"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "getBloodPressureReadings(url:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DataManager.swift"
+            timestampString = "552590098.433035"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "getBloodPressureReadings(url:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

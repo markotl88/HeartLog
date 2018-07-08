@@ -144,6 +144,12 @@ final class BPResultVC: CommonVC, StoryboardInitializable {
             bloodPressureReading.activity = tempActivity
             bloodPressureReading.note = tempNote
             
+            if bloodPressureReading.mood != nil && bloodPressureReading.activity != nil && bloodPressureReading.note != nil {
+                bloodPressureReading.metaIncomplete = false
+            } else {
+                bloodPressureReading.metaIncomplete = true
+            }
+            
             let currentDate = Date()
             var localTimeZoneAbbreviation: String { return TimeZone.current.secondsFromGMT().timezoneOffset() }
             bloodPressureReading.lastUpdated = currentDate.getTimestamp(utcOffset: nil)

@@ -10,8 +10,8 @@ import UIKit
 
 final class BPMeasuringVC: CommonVC, StoryboardInitializable {
 
-    var bpDeviceInstance : BP7!
     var bloodPressureReading : BloodPressureReading!
+    var bpMonitorController: BPMonitorController!
     
     @IBOutlet weak var contView: UIView!
     @IBOutlet var borderLine: UIView!
@@ -78,55 +78,12 @@ final class BPMeasuringVC: CommonVC, StoryboardInitializable {
     }
     
     func startMeasuring(){
-        if let bpDevice = bpDeviceInstance{
-            
-            startTimerAnimation()
-            startPulseAnimation()
-            flatHeartWave()
-            _ = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(animateHeartWave), userInfo: nil, repeats: false)
-            
-            
-//            UIView.animate(withDuration: 50.0, delay: 0.0, options: UIViewAnimationOptions.curveLinear, animations: {
-//
-//                
-//                DispatchQueue.main.async {
-//                    print("Graph image view width: \(self.graphImageView.frame.size.width)")
-//                    print("Scroll view width: \(self.graphImageView.frame.size.width)")
-//
-//                }
-//                
-//                self.scrollView.setContentOffset(CGPoint(x: self.graphImageView.frame.size.width - self.scrollView.frame.size.width, y: self.scrollView.contentOffset.y), animated: false)
-//                
-//            }, completion: nil)
-
-            bpDevice.commandStartMeasure({ (press: [Any]?) in
-            }, xiaoboWithHeart: { (heart: [Any]?) in
-            }, xiaoboNoHeart: { (noHeart: [Any]?) in
-            }, result: { (res: [AnyHashable : Any]?) in
-                
-                print("Result: \(res)")
-                
-                if let result = res, let sys = result["sys"] as? UInt, let dia = result["dia"] as? UInt, let heartRate = result["heartRate"] as? UInt {
-                    
-                    DispatchQueue.main.async {
-                        self.bloodPressureReading = BloodPressureReading(systolic: sys, diastolic: dia, heartRate: heartRate, time: nil)
-                        
-                        print(sys)
-                        print(dia)
-                        print(heartRate)
-                        
-                        self.iconHeart.layer.removeAllAnimations()
-                        self.stopHeartWaveAnimation()
-                        self.viewResult()
-                    }
-                }
-                
-            }) { (error) in
-                print("Error measure: \(BPDeviceError(rawValue: error.rawValue))")
-                self.handleError(error: error)
-                
-            }
-        }
+        
+        startTimerAnimation()
+        startPulseAnimation()
+        flatHeartWave()
+        _ = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(animateHeartWave), userInfo: nil, repeats: false)
+        bpMonitorController.startBPMeasure()
     }
     
     func viewResult(){
@@ -143,26 +100,7 @@ final class BPMeasuringVC: CommonVC, StoryboardInitializable {
     }
     
     func stopBPMeasure() {
-        if let bpDevice = bpDeviceInstance {
-            bpDevice.stopBPMeassureErrorBlock({
-                
-                print("BP Device stopped")
-                DispatchQueue.main.async {
-                    self.iconHeart.layer.removeAllAnimations()
-                    self.stopHeartWaveAnimation()
-                    self.timer?.invalidate()
-                    self.circleTimerView.startAngle = 90
-                    self.circleTimerView.setNeedsDisplay()
-                    _ = self.navigationController?.popToRootViewController(animated: true)
-                }
-                
-            }, errorBlock: { (error) in
-                
-                self.hideInfo(force: true)
-                self.handleError(error: error)
-
-            })
-        }
+        bpMonitorController.stopBPMeasure()
     }
     
     func showStopMeasureDialog(){
@@ -206,11 +144,8 @@ final class BPMeasuringVC: CommonVC, StoryboardInitializable {
     
     func animateBorder(){
         if circleTimerView.startAngle > -266 {
-//            circleTimerView.startAngle = 90
-            
             circleTimerView.startAngle -= 0.25
             circleTimerView.setNeedsDisplay()
-
         }else{
             timer?.invalidate()
         }
@@ -223,7 +158,7 @@ final class BPMeasuringVC: CommonVC, StoryboardInitializable {
         pulseAnimation.toValue = NSNumber(value: 1.20)
         pulseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         pulseAnimation.autoreverses = true
-        pulseAnimation.repeatCount = FLT_MAX
+        pulseAnimation.repeatCount = .greatestFiniteMagnitude
         self.iconHeart.layer.add(pulseAnimation, forKey: nil)
     }
     
@@ -276,15 +211,12 @@ final class BPMeasuringVC: CommonVC, StoryboardInitializable {
     
     func stopMeasuring(errorString: String){
         print("• Error handled: \(errorString)")
-//        self.showError(errorMessage: errorString)
         self.stopHeartWaveAnimation()
         self.iconHeart.layer.removeAllAnimations()
         timer?.invalidate()
         self.circleTimerView.startAngle = 90
         self.circleTimerView.setNeedsDisplay()
-        
         showErrorVC(error: errorString)
-        
     }
     
     func showErrorVC(error: String){
@@ -300,39 +232,41 @@ final class BPMeasuringVC: CommonVC, StoryboardInitializable {
         //TODO: self.showError(errorMessage: errorString)
     }
     
-    func handleError(error: BPDeviceError){
-        switch error {
-        case BPError0: stopMeasuring(errorString: "Unable to take measurements due to arm/wrist movements.")
-        case BPError1: stopMeasuring(errorString: "Failed to detect systolic pressure")
-        case BPError2: stopMeasuring(errorString: "Failed to detect diastolic pressure")
-        case BPError3: stopMeasuring(errorString: "Pneumatic system blocked or cuff is too tight")
-        case BPError4: stopMeasuring(errorString: "Pneumatic system leakage or cuff is too loose")
-        case BPError5: stopMeasuring(errorString: "Cuff pressure reached over 300mmHg")
-        case BPError6: stopMeasuring(errorString: "Cuff pressure reached over 15 mmHg for more than 160 seconds")
-        case BPError7: stopMeasuring(errorString: "Data retrieving error")
-        case BPError8: stopMeasuring(errorString: "Data retrieving error")
-        case BPError9: stopMeasuring(errorString: "Data retrieving error")
-        case BPError10: stopMeasuring(errorString: "Data retrieving error")
-        case BPError11: stopMeasuring(errorString: "Communication Error")
-        case BPError12: stopMeasuring(errorString: "Communication Error")
-        case BPError13: stopMeasuring(errorString: "Low battery")
-        case BPError14: stopMeasuring(errorString: "Device bluetooth set failed")
-        case BPError15: stopMeasuring(errorString: "Systolic exceeds 260mmHg or diastolic exceeds 199mmHg")
-        case BPError16: stopMeasuring(errorString: "Systolic below 60mmHg or diastolic below 40mmHg")
-        case BPError17: stopMeasuring(errorString: "Arm/wrist movement beyond range")
-        case BPNormalError: stopMeasuring(errorString: "device error, error message displayed automatically")
-        case BPOverTimeError: showError(errorString: "Abnormal communication")
-        case BPNoRespondError: showError(errorString: "Abnormal communication")
-        case BPBeyondRangeError: stopMeasuring(errorString: "Device is out of communication range.")
-        case BPDidDisconnect: stopMeasuring(errorString: "Device is disconnected.")
-        case BPAskToStopMeasure: stopMeasuring(errorString: "Measurement has been stopped.")
-        case BPInputParameterError: stopMeasuring(errorString: "Parameter input error.")
-        default:
-            return stopMeasuring(errorString: "Unknown error")
-        }
+    func measuringStopped() {
+        self.iconHeart.layer.removeAllAnimations()
+        self.stopHeartWaveAnimation()
+        self.timer?.invalidate()
+        self.circleTimerView.startAngle = 90
+        self.circleTimerView.setNeedsDisplay()
+        self.dismiss(animated: true, completion: nil)
     }
     
-    
+    func measuringDone(bloodPressureResult: BloodPressureReading?) {
+        
+        guard let bloodPressureResult = bloodPressureResult else {
+            return
+        }
+        self.bloodPressureReading = bloodPressureResult
+        self.iconHeart.layer.removeAllAnimations()
+        self.stopHeartWaveAnimation()
+        self.viewResult()
+    }
+}
+
+extension BPMeasuringVC: BPMonitorDelegate {
+    func bpController(didSetState state: BPMonitorState, angle: Int?, errorMessage: String?, bloodPressureResult: BloodPressureReading?) {
+        
+        switch state {
+        case .MeasuringDone:
+            measuringDone(bloodPressureResult: bloodPressureResult)
+        case .MeasuringStopped:
+            measuringStopped()
+        case .MeasuringNonFatalError:
+            showError(errorString: errorMessage ?? "Unknown non-fatal error")
+        default:
+            break
+        }
+    }
 }
 
 extension BPMeasuringVC : ErrorDelegate {
@@ -361,5 +295,4 @@ extension BPMeasuringVC : StopMeasureDelegate {
         blurEffectView.removeFromSuperview()
         stopBPMeasure()
     }
-    
 }

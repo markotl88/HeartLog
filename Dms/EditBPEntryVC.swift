@@ -130,6 +130,12 @@ final class EditBPEntryVC: CommonVC, StoryboardInitializable {
                 var localTimeZoneAbbreviation: String { return TimeZone.current.secondsFromGMT().timezoneOffset() }
                 bloodPressureReading.lastUpdated = currentDate.getTimestamp(utcOffset: nil)
                 
+                if bloodPressureReading.mood != nil && bloodPressureReading.activity != nil && bloodPressureReading.note != nil {
+                    bloodPressureReading.metaIncomplete = false
+                } else {
+                    bloodPressureReading.metaIncomplete = true
+                }
+
                 DataManager.sharedInstance.editBloodPressureReading(bloodPressureReading: bloodPressureReading!, completion: { (SingleBloodPressureReadingResponse) in
                     self.stopLoading()
                     if SingleBloodPressureReadingResponse.success {
