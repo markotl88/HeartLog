@@ -253,7 +253,7 @@ final class BPMeasuringVC: CommonVC, StoryboardInitializable {
     }
 }
 
-extension BPMeasuringVC: BPMonitorDelegate {
+extension BPMeasuringVC: BPMonitorControllerDelegate {
     func bpController(didSetState state: BPMonitorState, angle: Int?, errorMessage: String?, bloodPressureResult: BloodPressureReading?) {
         
         switch state {

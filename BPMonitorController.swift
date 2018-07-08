@@ -18,7 +18,7 @@ enum BPMonitorState {
     case MeasuringNonFatalError
 }
 
-protocol BPMonitorDelegate: class {
+protocol BPMonitorControllerDelegate: class {
     func bpController(didSetState state: BPMonitorState, angle: Int?, errorMessage: String?, bloodPressureResult: BloodPressureReading?)
 }
 
@@ -30,20 +30,10 @@ final class BPMonitorController {
     
     var bpDeviceInstance : BP7?
     var bpController = BP7Controller.share()
-    var connectDeviceController = ConnectDeviceController.commandGetInstance()
     
     var bpState = BPMonitorState.NotConnected 
     
-    weak var delegate: BPMonitorDelegate?
-    
-    func addNotificationObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(deviceDiscovered(info:)), name: NSNotification.Name(rawValue: BP7ConnectNoti), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(deviceDisconnected(info:)), name: NSNotification.Name(rawValue: BP7DisConnectNoti), object: nil)
-    }
-    func removeNotificationObservers() {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: BP7ConnectNoti), object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: BP7DisConnectNoti), object: nil)
-    }
+    weak var delegate: BPMonitorControllerDelegate?
     
     init(clientId: String, clientSecret: String, userId: String) {
         self.clientId = clientId
@@ -52,12 +42,12 @@ final class BPMonitorController {
         addNotificationObservers()
     }
     
-    func start() {
-        tryToConnectBPDevice()
+    public func startConnection() {
         addNotificationObservers()
         startScanningForBPDevices()
     }
-    func stop() {
+    
+    public func stopConnection() {
         stopScanningForBPDevices()
         if let bpDevice = bpDeviceInstance {
             bpDevice.stopBPMeassureErrorBlock({
@@ -68,15 +58,70 @@ final class BPMonitorController {
         }
     }
     
+    public func prepareForMeasure() {
+        startGettingAngle()
+    }
+
+    public func startBPMeasure() {
+        if let bpDevice = bpDeviceInstance {
+            bpDevice.commandStartMeasure({ (press: [Any]?) in
+            }, xiaoboWithHeart: { (heart: [Any]?) in
+            }, xiaoboNoHeart: { (noHeart: [Any]?) in
+            }, result: { (res: [AnyHashable : Any]?) in
+                
+                if let result = res, let sys = result["sys"] as? UInt, let dia = result["dia"] as? UInt, let heartRate = result["heartRate"] as? UInt {
+                    
+                    DispatchQueue.main.async {
+                        let bloodPressureResult = BloodPressureReading(systolic: sys, diastolic: dia, heartRate: heartRate, time: nil)
+                        self.delegate?.bpController(didSetState: BPMonitorState.MeasuringDone, angle: nil, errorMessage: nil, bloodPressureResult: bloodPressureResult)
+                    }
+                }
+                
+            }) { (error) in
+                self.delegate?.bpController(didSetState: BPMonitorState.Disconnected, angle: nil, errorMessage: self.handleError(error: error), bloodPressureResult: nil)
+            }
+        }
+    }
+    
+    public func stopBPMeasure() {
+        if let bpDevice = bpDeviceInstance {
+            bpDevice.stopBPMeassureErrorBlock({
+                
+                DispatchQueue.main.async {
+                    self.delegate?.bpController(didSetState: BPMonitorState.MeasuringStopped, angle: nil, errorMessage: "Measure stopped", bloodPressureResult: nil)
+                }
+                
+            }, errorBlock: { (error) in
+                
+                if error == BPOverTimeError || error == BPNoRespondError {
+                    self.delegate?.bpController(didSetState: BPMonitorState.MeasuringNonFatalError, angle: nil, errorMessage: self.handleError(error: error), bloodPressureResult: nil)
+                } else {
+                    self.delegate?.bpController(didSetState: BPMonitorState.Disconnected, angle: nil, errorMessage: self.handleError(error: error), bloodPressureResult: nil)
+                }
+            })
+        }
+    }
+    
+    // BP7 Observers
+    fileprivate func addNotificationObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(deviceDiscovered(info:)), name: NSNotification.Name(rawValue: BP7ConnectNoti), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(deviceDisconnected(info:)), name: NSNotification.Name(rawValue: BP7DisConnectNoti), object: nil)
+    }
+    
+    fileprivate func removeNotificationObservers() {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: BP7ConnectNoti), object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: BP7DisConnectNoti), object: nil)
+    }
+    
     deinit {
         removeNotificationObservers()
     }
     
-    func tryToConnectBPDevice(){
+    fileprivate func bpDeviceConnected(){
         if let bpDevices = bpController?.getAllCurrentBP7Instace() as? [BP7] {
             if bpDevices.count != 0 {
-                bpDeviceInstance = bpDevices.first
                 stopScanningForBPDevices()
+                bpDeviceInstance = bpDevices.first
                 self.delegate?.bpController(didSetState: BPMonitorState.Connected, angle: nil, errorMessage: nil, bloodPressureResult: nil)
             }else{
                 //TODO: Print something
@@ -85,21 +130,7 @@ final class BPMonitorController {
             //TODO: Print something
         }
     }
-    func bpDeviceConnected(){
-        if let bpDevices = bpController?.getAllCurrentBP7Instace() as? [BP7] {
-            if bpDevices.count != 0 {
-                stopScanningForBPDevices()
-                bpDeviceInstance = bpDevices.first
-                self.delegate?.bpController(didSetState: BPMonitorState.Connected, angle: nil, errorMessage: nil, bloodPressureResult: nil)
-                
-            }else{
-                //TODO: Print something
-            }
-        }else{
-            //TODO: Print something
-        }
-    }
-    @objc func deviceDiscovered(info: Notification){
+    @objc fileprivate func deviceDiscovered(info: Notification){
         
         stopScanningForBPDevices()
         print("BP7 Device Connected")
@@ -110,26 +141,26 @@ final class BPMonitorController {
                 if let bpDev = bpDevs.first {
                     print("BP Device UUID: \(bpDev.currentUUID)")
                     print("BP Device SN: \(bpDev.serialNumber)")
-                    self.connectDeviceController?.commandContectDevice(with: HealthDeviceType_BP7S, andSerialNub: bpDev.serialNumber)
+                    ConnectDeviceController.commandGetInstance().commandContectDevice(with: HealthDeviceType_BP7S, andSerialNub: bpDev.serialNumber)
                 }
             }
         }
         self.bpDeviceConnected()
     }
-    @objc func deviceDisconnected(info: Notification){
+    @objc fileprivate func deviceDisconnected(info: Notification){
         print("BP7 Device Disconnected")
     }
-    func startScanningForBPDevices() {
+    fileprivate func startScanningForBPDevices() {
         ScanDeviceController.commandGetInstance().commandScanDeviceType(HealthDeviceType_BP7S)
     }
-    func stopScanningForBPDevices(){
+    fileprivate func stopScanningForBPDevices(){
         ScanDeviceController.commandGetInstance().commandStopScanDeviceType(HealthDeviceType_BP7S)
     }
-    @objc func iHealthAuthenticationTimedOut() {
+    @objc fileprivate func iHealthAuthenticationTimedOut() {
         self.delegate?.bpController(didSetState: BPMonitorState.NotConnected, angle: nil, errorMessage: "Connection to BP7 timed out", bloodPressureResult: nil)
     }
     
-    func startGettingAngle(){
+    fileprivate func startGettingAngle(){
         if let bpDevice = bpDeviceInstance {
             
             bpDevice.commandEnergy({ (batteryLevel: NSNumber?) in
@@ -176,47 +207,7 @@ final class BPMonitorController {
         }
     }
     
-    func startBPMeasure() {
-        if let bpDevice = bpDeviceInstance {
-            bpDevice.commandStartMeasure({ (press: [Any]?) in
-            }, xiaoboWithHeart: { (heart: [Any]?) in
-            }, xiaoboNoHeart: { (noHeart: [Any]?) in
-            }, result: { (res: [AnyHashable : Any]?) in
-                
-                if let result = res, let sys = result["sys"] as? UInt, let dia = result["dia"] as? UInt, let heartRate = result["heartRate"] as? UInt {
-                    
-                    DispatchQueue.main.async {
-                        let bloodPressureResult = BloodPressureReading(systolic: sys, diastolic: dia, heartRate: heartRate, time: nil)
-                        self.delegate?.bpController(didSetState: BPMonitorState.MeasuringDone, angle: nil, errorMessage: nil, bloodPressureResult: bloodPressureResult)
-                    }
-                }
-                
-            }) { (error) in
-                self.delegate?.bpController(didSetState: BPMonitorState.Disconnected, angle: nil, errorMessage: self.handleError(error: error), bloodPressureResult: nil)
-            }
-        }
-    }
-    
-    func stopBPMeasure() {
-        if let bpDevice = bpDeviceInstance {
-            bpDevice.stopBPMeassureErrorBlock({
-                
-                DispatchQueue.main.async {
-                    self.delegate?.bpController(didSetState: BPMonitorState.MeasuringStopped, angle: nil, errorMessage: "Measure stopped", bloodPressureResult: nil)
-                }
-                
-            }, errorBlock: { (error) in
-                
-                if error == BPOverTimeError || error == BPNoRespondError {
-                    self.delegate?.bpController(didSetState: BPMonitorState.MeasuringNonFatalError, angle: nil, errorMessage: self.handleError(error: error), bloodPressureResult: nil)
-                } else {
-                    self.delegate?.bpController(didSetState: BPMonitorState.Disconnected, angle: nil, errorMessage: self.handleError(error: error), bloodPressureResult: nil)
-                }
-            })
-        }
-    }
-
-    func handleError(error: BPDeviceError) -> String{
+    fileprivate func handleError(error: BPDeviceError) -> String{
         
         var bpErrorMessage = ""
         

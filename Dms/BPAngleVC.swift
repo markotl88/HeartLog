@@ -64,7 +64,7 @@ final class BPAngleVC: CommonVC, StoryboardInitializable {
         startAnimation()
         
         bpMonitorController.delegate = self
-        bpMonitorController.start()
+        bpMonitorController.startConnection()
         
         self.managerBLE = CBCentralManager(delegate: self, queue: nil, options: [CBCentralManagerOptionShowPowerAlertKey: false])
     }
@@ -76,7 +76,7 @@ final class BPAngleVC: CommonVC, StoryboardInitializable {
         removeNotificationObservers()
         
         if measureStarted == false {
-            bpMonitorController.stop()
+            bpMonitorController.stopConnection()
         }
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -200,7 +200,7 @@ extension BPAngleVC {
     func deviceConnected(){
         defaults.set(true, forKey: UserDefaultsStrings.bloodPressureDeviceSet)
         self.btConnectView.isHidden = true
-        bpMonitorController.startGettingAngle()
+        bpMonitorController.prepareForMeasure()
     }
     func deviceNeverConnected(){
         self.btImage02.layer.removeAllAnimations()
@@ -224,7 +224,7 @@ extension BPAngleVC {
     }
 }
 
-extension BPAngleVC: BPMonitorDelegate {
+extension BPAngleVC: BPMonitorControllerDelegate {
     func bpController(didSetState state: BPMonitorState, angle: Int?, errorMessage: String?, bloodPressureResult: BloodPressureReading?) {
         switch state {
         case .NotConnected:

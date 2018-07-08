@@ -217,7 +217,7 @@
 		4D72FEA61DD075AF007C0310 /* DmsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D72FEA51DD075AF007C0310 /* DmsTests.swift */; };
 		4D72FEB11DD075AF007C0310 /* DmsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D72FEB01DD075AF007C0310 /* DmsUITests.swift */; };
 		4D74017B1E4322F900E3DCF8 /* DataManager + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D74017A1E4322F900E3DCF8 /* DataManager + Extensions.swift */; };
-		4D75E82C1E09739500351727 /* DmsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D75E82A1E09739500351727 /* DmsModel.xcdatamodeld */; };
+		4D75E82C1E09739500351727 /* HeartLogModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D75E82A1E09739500351727 /* HeartLogModel.xcdatamodeld */; };
 		4D8409101E263F5700763CBF /* GlucosePlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D84090F1E263F5700763CBF /* GlucosePlaceholderView.swift */; };
 		4D8EA8D91E38D3B30073F52F /* PlaceholderLbsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8EA8D81E38D3B30073F52F /* PlaceholderLbsView.swift */; };
 		4D8EA8DB1E38E2970073F52F /* HeightPickerField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8EA8DA1E38E2970073F52F /* HeightPickerField.swift */; };
@@ -443,6 +443,7 @@
 		4D4B42D620EEE5B100F6680C /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		4D4B42D720EEE5B200F6680C /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		4D4B42DA20F1989400F6680C /* BPMonitorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BPMonitorController.swift; sourceTree = "<group>"; };
+		4D4B42DC20F22BE400F6680C /* HeartLogModel 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "HeartLogModel 4.xcdatamodel"; sourceTree = "<group>"; };
 		4D4B59D41E1D566F007C2B93 /* GraphTableCellLandscape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphTableCellLandscape.swift; sourceTree = "<group>"; };
 		4D4B59D51E1D566F007C2B93 /* GraphTableCellLandscape.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GraphTableCellLandscape.xib; sourceTree = "<group>"; };
 		4D4C695B1E0AB1A7002188D4 /* ViewMoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewMoreCell.swift; sourceTree = "<group>"; };
@@ -491,17 +492,17 @@
 		4D7052481E01BF9D000F9DBD /* MoodLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodLabel.swift; sourceTree = "<group>"; };
 		4D70524D1E01C817000F9DBD /* NoteTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTextView.swift; sourceTree = "<group>"; };
 		4D70524F1E01D46B000F9DBD /* ResultActivityLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultActivityLabel.swift; sourceTree = "<group>"; };
-		4D72FE8D1DD075AF007C0310 /* Dms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dms.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D72FE8D1DD075AF007C0310 /* HeartLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeartLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D72FE901DD075AF007C0310 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D72FE921DD075AF007C0310 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4D72FE951DD075AF007C0310 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D72FE971DD075AF007C0310 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D72FE9A1DD075AF007C0310 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D72FE9C1DD075AF007C0310 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D72FEA11DD075AF007C0310 /* DmsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DmsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D72FEA11DD075AF007C0310 /* HeartLogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeartLogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D72FEA51DD075AF007C0310 /* DmsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DmsTests.swift; sourceTree = "<group>"; };
 		4D72FEA71DD075AF007C0310 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D72FEAC1DD075AF007C0310 /* DmsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DmsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D72FEAC1DD075AF007C0310 /* HeartLogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeartLogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D72FEB01DD075AF007C0310 /* DmsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DmsUITests.swift; sourceTree = "<group>"; };
 		4D72FEB21DD075AF007C0310 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D74017A1E4322F900E3DCF8 /* DataManager + Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataManager + Extensions.swift"; sourceTree = "<group>"; };
@@ -849,7 +850,7 @@
 				4D72FE971DD075AF007C0310 /* Assets.xcassets */,
 				4D72FE991DD075AF007C0310 /* LaunchScreen.storyboard */,
 				4D72FE9C1DD075AF007C0310 /* Info.plist */,
-				4D75E82A1E09739500351727 /* DmsModel.xcdatamodeld */,
+				4D75E82A1E09739500351727 /* HeartLogModel.xcdatamodeld */,
 			);
 			name = Supporting;
 			sourceTree = "<group>";
@@ -1136,9 +1137,9 @@
 		4D72FE8E1DD075AF007C0310 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4D72FE8D1DD075AF007C0310 /* Dms.app */,
-				4D72FEA11DD075AF007C0310 /* DmsTests.xctest */,
-				4D72FEAC1DD075AF007C0310 /* DmsUITests.xctest */,
+				4D72FE8D1DD075AF007C0310 /* HeartLog.app */,
+				4D72FEA11DD075AF007C0310 /* HeartLogTests.xctest */,
+				4D72FEAC1DD075AF007C0310 /* HeartLogUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1306,9 +1307,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4D72FE8C1DD075AF007C0310 /* Dms */ = {
+		4D72FE8C1DD075AF007C0310 /* HeartLog */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4D72FEB51DD075AF007C0310 /* Build configuration list for PBXNativeTarget "Dms" */;
+			buildConfigurationList = 4D72FEB51DD075AF007C0310 /* Build configuration list for PBXNativeTarget "HeartLog" */;
 			buildPhases = (
 				8DA03F559A64BFE28744C103 /* [CP] Check Pods Manifest.lock */,
 				4D72FE891DD075AF007C0310 /* Sources */,
@@ -1322,14 +1323,14 @@
 			);
 			dependencies = (
 			);
-			name = Dms;
+			name = HeartLog;
 			productName = Dms;
-			productReference = 4D72FE8D1DD075AF007C0310 /* Dms.app */;
+			productReference = 4D72FE8D1DD075AF007C0310 /* HeartLog.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4D72FEA01DD075AF007C0310 /* DmsTests */ = {
+		4D72FEA01DD075AF007C0310 /* HeartLogTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4D72FEB81DD075AF007C0310 /* Build configuration list for PBXNativeTarget "DmsTests" */;
+			buildConfigurationList = 4D72FEB81DD075AF007C0310 /* Build configuration list for PBXNativeTarget "HeartLogTests" */;
 			buildPhases = (
 				B8350825B4A3B057E59EF6A3 /* [CP] Check Pods Manifest.lock */,
 				4D72FE9D1DD075AF007C0310 /* Sources */,
@@ -1343,14 +1344,14 @@
 			dependencies = (
 				4D72FEA31DD075AF007C0310 /* PBXTargetDependency */,
 			);
-			name = DmsTests;
+			name = HeartLogTests;
 			productName = DmsTests;
-			productReference = 4D72FEA11DD075AF007C0310 /* DmsTests.xctest */;
+			productReference = 4D72FEA11DD075AF007C0310 /* HeartLogTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4D72FEAB1DD075AF007C0310 /* DmsUITests */ = {
+		4D72FEAB1DD075AF007C0310 /* HeartLogUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4D72FEBB1DD075AF007C0310 /* Build configuration list for PBXNativeTarget "DmsUITests" */;
+			buildConfigurationList = 4D72FEBB1DD075AF007C0310 /* Build configuration list for PBXNativeTarget "HeartLogUITests" */;
 			buildPhases = (
 				1C2DBCACA82566177EACF962 /* [CP] Check Pods Manifest.lock */,
 				4D72FEA81DD075AF007C0310 /* Sources */,
@@ -1364,9 +1365,9 @@
 			dependencies = (
 				4D72FEAE1DD075AF007C0310 /* PBXTargetDependency */,
 			);
-			name = DmsUITests;
+			name = HeartLogUITests;
 			productName = DmsUITests;
-			productReference = 4D72FEAC1DD075AF007C0310 /* DmsUITests.xctest */;
+			productReference = 4D72FEAC1DD075AF007C0310 /* HeartLogUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -1404,7 +1405,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4D72FE881DD075AF007C0310 /* Build configuration list for PBXProject "Dms" */;
+			buildConfigurationList = 4D72FE881DD075AF007C0310 /* Build configuration list for PBXProject "HeartLog" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -1417,9 +1418,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4D72FE8C1DD075AF007C0310 /* Dms */,
-				4D72FEA01DD075AF007C0310 /* DmsTests */,
-				4D72FEAB1DD075AF007C0310 /* DmsUITests */,
+				4D72FE8C1DD075AF007C0310 /* HeartLog */,
+				4D72FEA01DD075AF007C0310 /* HeartLogTests */,
+				4D72FEAB1DD075AF007C0310 /* HeartLogUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1703,7 +1704,7 @@
 				4D7052501E01D46B000F9DBD /* ResultActivityLabel.swift in Sources */,
 				4D5C851A1DF707C90084BB95 /* MaskInputTextField.swift in Sources */,
 				02139D391E83216F009C1DC6 /* ChartAxisValueInt.swift in Sources */,
-				4D75E82C1E09739500351727 /* DmsModel.xcdatamodeld in Sources */,
+				4D75E82C1E09739500351727 /* HeartLogModel.xcdatamodeld in Sources */,
 				02139D681E83216F009C1DC6 /* ChartPointViewBarGreyOut.swift in Sources */,
 				02139D561E83216F009C1DC6 /* ChartPointsLineLayer.swift in Sources */,
 				4D9DBB3E1E082ABA00022857 /* CellDateLabel.swift in Sources */,
@@ -1843,12 +1844,12 @@
 /* Begin PBXTargetDependency section */
 		4D72FEA31DD075AF007C0310 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4D72FE8C1DD075AF007C0310 /* Dms */;
+			target = 4D72FE8C1DD075AF007C0310 /* HeartLog */;
 			targetProxy = 4D72FEA21DD075AF007C0310 /* PBXContainerItemProxy */;
 		};
 		4D72FEAE1DD075AF007C0310 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4D72FE8C1DD075AF007C0310 /* Dms */;
+			target = 4D72FE8C1DD075AF007C0310 /* HeartLog */;
 			targetProxy = 4D72FEAD1DD075AF007C0310 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -2060,7 +2061,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dms.DmsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dms.app/Dms";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeartLog.app/HeartLog";
 			};
 			name = Debug;
 		};
@@ -2076,7 +2077,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dms.DmsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dms.app/Dms";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeartLog.app/HeartLog";
 			};
 			name = Release;
 		};
@@ -2113,7 +2114,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4D72FE881DD075AF007C0310 /* Build configuration list for PBXProject "Dms" */ = {
+		4D72FE881DD075AF007C0310 /* Build configuration list for PBXProject "HeartLog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4D72FEB31DD075AF007C0310 /* Debug */,
@@ -2122,7 +2123,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4D72FEB51DD075AF007C0310 /* Build configuration list for PBXNativeTarget "Dms" */ = {
+		4D72FEB51DD075AF007C0310 /* Build configuration list for PBXNativeTarget "HeartLog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4D72FEB61DD075AF007C0310 /* Debug */,
@@ -2131,7 +2132,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4D72FEB81DD075AF007C0310 /* Build configuration list for PBXNativeTarget "DmsTests" */ = {
+		4D72FEB81DD075AF007C0310 /* Build configuration list for PBXNativeTarget "HeartLogTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4D72FEB91DD075AF007C0310 /* Debug */,
@@ -2140,7 +2141,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4D72FEBB1DD075AF007C0310 /* Build configuration list for PBXNativeTarget "DmsUITests" */ = {
+		4D72FEBB1DD075AF007C0310 /* Build configuration list for PBXNativeTarget "HeartLogUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4D72FEBC1DD075AF007C0310 /* Debug */,
@@ -2152,15 +2153,16 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4D75E82A1E09739500351727 /* DmsModel.xcdatamodeld */ = {
+		4D75E82A1E09739500351727 /* HeartLogModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				4D4B42DC20F22BE400F6680C /* HeartLogModel 4.xcdatamodel */,
 				4D4B40BD20EEA89600F6680C /* DmsModel 3.xcdatamodel */,
 				B21796881EE9BA2500704921 /* DmsModel 2.xcdatamodel */,
 				4D75E82B1E09739500351727 /* DmsModel.xcdatamodel */,
 			);
-			currentVersion = 4D4B40BD20EEA89600F6680C /* DmsModel 3.xcdatamodel */;
-			path = DmsModel.xcdatamodeld;
+			currentVersion = 4D4B42DC20F22BE400F6680C /* HeartLogModel 4.xcdatamodel */;
+			path = HeartLogModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
