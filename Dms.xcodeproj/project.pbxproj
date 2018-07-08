@@ -430,15 +430,6 @@
 		4D379C4A1E574CC9002D6629 /* DashedBorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashedBorderView.swift; sourceTree = "<group>"; };
 		4D39D39E1DFAFB5C007A2529 /* ActivityLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityLabel.swift; sourceTree = "<group>"; };
 		4D39D3A01DFAFBBD007A2529 /* DurationLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DurationLabel.swift; sourceTree = "<group>"; };
-		4D3AE0E91E5EDC04002695FF /* HS3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HS3.h; sourceTree = "<group>"; };
-		4D3AE0EA1E5EDC04002695FF /* HS3Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HS3Controller.h; sourceTree = "<group>"; };
-		4D3AE0EB1E5EDC04002695FF /* HS4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HS4.h; sourceTree = "<group>"; };
-		4D3AE0EC1E5EDC04002695FF /* HS4Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HS4Controller.h; sourceTree = "<group>"; };
-		4D3AE0ED1E5EDC04002695FF /* HS5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HS5.h; sourceTree = "<group>"; };
-		4D3AE0EE1E5EDC04002695FF /* HS5Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HS5Controller.h; sourceTree = "<group>"; };
-		4D3AE0EF1E5EDC04002695FF /* HSHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSHeader.h; sourceTree = "<group>"; };
-		4D3AE0F01E5EDC04002695FF /* HSMacroFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSMacroFile.h; sourceTree = "<group>"; };
-		4D3AE0F11E5EDC04002695FF /* iHealthHS6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iHealthHS6.h; sourceTree = "<group>"; };
 		4D3EF38D1E42470E00E61EFA /* DurationPickerField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DurationPickerField.swift; sourceTree = "<group>"; };
 		4D43A6861E5521AB00A0155C /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../../../../usr/lib/libc++.1.dylib"; sourceTree = "<group>"; };
 		4D4B40BD20EEA89600F6680C /* DmsModel 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "DmsModel 3.xcdatamodel"; sourceTree = "<group>"; };
@@ -567,16 +558,6 @@
 		4DB94F621DD204A100898963 /* UIColor+DMSAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+DMSAdditions.swift"; path = "Dms/Extensions/UIColor+DMSAdditions.swift"; sourceTree = "<group>"; };
 		4DB94F651DD21AB900898963 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		4DBD52A11E042FE1009654A9 /* LogoLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoLabel.swift; sourceTree = "<group>"; };
-		4DC8B5751E1FBE1B003CB0A3 /* BG1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BG1.h; sourceTree = "<group>"; };
-		4DC8B5761E1FBE1B003CB0A3 /* BG1Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BG1Controller.h; sourceTree = "<group>"; };
-		4DC8B5771E1FBE1B003CB0A3 /* BG3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BG3.h; sourceTree = "<group>"; };
-		4DC8B5781E1FBE1B003CB0A3 /* BG3Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BG3Controller.h; sourceTree = "<group>"; };
-		4DC8B5791E1FBE1B003CB0A3 /* BG5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BG5.h; sourceTree = "<group>"; };
-		4DC8B57A1E1FBE1B003CB0A3 /* BG5Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BG5Controller.h; sourceTree = "<group>"; };
-		4DC8B57B1E1FBE1B003CB0A3 /* BG5L.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BG5L.h; sourceTree = "<group>"; };
-		4DC8B57C1E1FBE1B003CB0A3 /* BG5LController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BG5LController.h; sourceTree = "<group>"; };
-		4DC8B57D1E1FBE1B003CB0A3 /* BGHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGHeader.h; sourceTree = "<group>"; };
-		4DC8B57E1E1FBE1B003CB0A3 /* BGMacroFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGMacroFile.h; sourceTree = "<group>"; };
 		4DE2B1691DFECD2800FCB0B0 /* CustomShapeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomShapeButton.swift; sourceTree = "<group>"; };
 		4DE43AF61E02A00B0059AB7D /* BPManualEntryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BPManualEntryVC.swift; sourceTree = "<group>"; };
 		4DE43AF81E02A55C0059AB7D /* ManualResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualResultCell.swift; sourceTree = "<group>"; };
@@ -917,22 +898,6 @@
 			name = "Single Readings";
 			sourceTree = "<group>";
 		};
-		4D3AE0E81E5EDBE5002695FF /* Scale Files */ = {
-			isa = PBXGroup;
-			children = (
-				4D3AE0E91E5EDC04002695FF /* HS3.h */,
-				4D3AE0EA1E5EDC04002695FF /* HS3Controller.h */,
-				4D3AE0EB1E5EDC04002695FF /* HS4.h */,
-				4D3AE0EC1E5EDC04002695FF /* HS4Controller.h */,
-				4D3AE0ED1E5EDC04002695FF /* HS5.h */,
-				4D3AE0EE1E5EDC04002695FF /* HS5Controller.h */,
-				4D3AE0EF1E5EDC04002695FF /* HSHeader.h */,
-				4D3AE0F01E5EDC04002695FF /* HSMacroFile.h */,
-				4D3AE0F11E5EDC04002695FF /* iHealthHS6.h */,
-			);
-			name = "Scale Files";
-			sourceTree = "<group>";
-		};
 		4D4B42C520EEB63900F6680C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -1244,9 +1209,7 @@
 			isa = PBXGroup;
 			children = (
 				02139CD51E83216F009C1DC6 /* SwiftCharts */,
-				4D3AE0E81E5EDBE5002695FF /* Scale Files */,
 				4D9BBF591E0030C5008A7A05 /* Blood Pressure Files */,
-				4DC8B5741E1FBDFA003CB0A3 /* Glucose Files */,
 				4D9BBF571E0030B7008A7A05 /* iHealthSDK2.0.7.1.a */,
 			);
 			name = SDKs;
@@ -1306,23 +1269,6 @@
 				4D68322B1DDA0A3600069352 /* Other */,
 			);
 			name = "Custom Views";
-			sourceTree = "<group>";
-		};
-		4DC8B5741E1FBDFA003CB0A3 /* Glucose Files */ = {
-			isa = PBXGroup;
-			children = (
-				4DC8B5751E1FBE1B003CB0A3 /* BG1.h */,
-				4DC8B5761E1FBE1B003CB0A3 /* BG1Controller.h */,
-				4DC8B5771E1FBE1B003CB0A3 /* BG3.h */,
-				4DC8B5781E1FBE1B003CB0A3 /* BG3Controller.h */,
-				4DC8B5791E1FBE1B003CB0A3 /* BG5.h */,
-				4DC8B57A1E1FBE1B003CB0A3 /* BG5Controller.h */,
-				4DC8B57B1E1FBE1B003CB0A3 /* BG5L.h */,
-				4DC8B57C1E1FBE1B003CB0A3 /* BG5LController.h */,
-				4DC8B57D1E1FBE1B003CB0A3 /* BGHeader.h */,
-				4DC8B57E1E1FBE1B003CB0A3 /* BGMacroFile.h */,
-			);
-			name = "Glucose Files";
 			sourceTree = "<group>";
 		};
 		6CF98025A14A60DEBBC9A55B /* Pods */ = {
